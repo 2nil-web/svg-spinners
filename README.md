@@ -1,29 +1,28 @@
-# <img src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/icon-48.gif" valign="middle">&nbsp;&nbsp;SVG Spinners (CSS & SMIL)
+## <img src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/icon-48.gif" valign="middle">&nbsp;&nbsp;SVG Spinners colorized through css filter
 
-Taken from [Utkarsh Verma collection of svg spinners](https://github.com/n3r4zzurr0/svg-spinners.git)
-
-I have simplified the README and added an html page to provide a way to colorized the spinner through css filters (work in progress!).
+The spinner part is taken from [Utkarsh Verma/n3r4zzurr0](https://github.com/n3r4zzurr0/svg-spinners.git) and the filter part is taken from [Angel Rodriguez/angel-rs](https://github.com/angel-rs/css-color-filter-generator.git), thanks to them !
+I just provide an html page to colorized the spinner through css filters (work in progress!).
 
 ## Rings
 
-![](preview/90-ring-black-36.svg)    ![](preview/90-ring-with-bg-black-36.svg)    ![](preview/180-ring-black-36.svg)    ![](preview/180-ring-with-bg-black-36.svg)    ![](preview/270-ring-black-36.svg)    ![](preview/270-ring-with-bg-black-36.svg)    ![](preview/ring-resize-black-36.svg)
+![](svg-css/90-ring.svg)    ![](svg-css/90-ring-with-bg.svg)    ![](svg-css/180-ring.svg)    ![](svg-css/180-ring-with-bg.svg)    ![](svg-css/270-ring.svg)    ![](svg-css/270-ring-with-bg.svg)    ![](svg-css/ring-resize.svg)
 
 ## Dots
 
-![](preview/3-dots-bounce-black-36.svg)    ![](preview/3-dots-fade-black-36.svg)    ![](preview/3-dots-move-black-36.svg)    ![](preview/3-dots-rotate-black-36.svg)    ![](preview/3-dots-scale-black-36.svg)    ![](preview/3-dots-scale-middle-black-36.svg)    ![](preview/6-dots-rotate-black-36.svg)    ![](preview/6-dots-scale-black-36.svg)    ![](preview/6-dots-scale-middle-black-36.svg)    ![](preview/8-dots-rotate-black-36.svg)    ![](preview/12-dots-scale-rotate-black-36.svg)    ![](preview/dot-revolve-black-36.svg)
+![](svg-css/3-dots-bounce.svg)    ![](svg-css/3-dots-fade.svg)    ![](svg-css/3-dots-move.svg)    ![](svg-css/3-dots-rotate.svg)    ![](svg-css/3-dots-scale.svg)    ![](svg-css/3-dots-scale-middle.svg)    ![](svg-css/6-dots-rotate.svg)    ![](svg-css/6-dots-scale.svg)    ![](svg-css/6-dots-scale-middle.svg)    ![](svg-css/8-dots-rotate.svg)    ![](svg-css/12-dots-scale-rotate.svg)    ![](svg-css/dot-revolve.svg)
 
 ## Bars
 
-![](preview/bars-fade-black-36.svg)    ![](preview/bars-scale-black-36.svg)    ![](preview/bars-scale-fade-black-36.svg)    ![](preview/bars-scale-middle-black-36.svg)    ![](preview/bars-rotate-fade-black-36.svg)
+![](svg-css/bars-fade.svg)    ![](svg-css/bars-scale.svg)    ![](svg-css/bars-scale-fade.svg)    ![](svg-css/bars-scale-middle.svg)    ![](svg-css/bars-rotate-fade.svg)
 
 ## Blocks
 
-![](preview/blocks-scale-black-36.svg)    ![](preview/blocks-shuffle-2-black-36.svg)    ![](preview/blocks-shuffle-3-black-36.svg)    ![](preview/blocks-wave-black-36.svg)
+![](svg-css/blocks-scale.svg)    ![](svg-css/blocks-shuffle-2.svg)    ![](svg-css/blocks-shuffle-3.svg)    ![](svg-css/blocks-wave.svg)
 
 ## Pulses
 
-![](preview/pulse-black-36.svg)    ![](preview/pulse-2-black-36.svg)    ![](preview/pulse-3-black-36.svg)    ![](preview/pulse-multiple-black-36.svg)    ![](preview/pulse-ring-black-36.svg)    ![](preview/pulse-rings-2-black-36.svg)    ![](preview/pulse-rings-3-black-36.svg)    ![](preview/pulse-rings-multiple-black-36.svg)
+![](svg-css/pulse.svg)    ![](svg-css/pulse-2.svg)    ![](svg-css/pulse-3.svg)    ![](svg-css/pulse-multiple.svg)    ![](svg-css/pulse-ring.svg)    ![](svg-css/pulse-rings-2.svg)    ![](svg-css/pulse-rings-3.svg)    ![](svg-css/pulse-rings-multiple.svg)
 
 ## Other
 
-![](preview/bouncing-ball-black-36.svg)    ![](preview/clock-black-36.svg)    ![](preview/eclipse-black-36.svg)    ![](preview/eclipse-half-black-36.svg)    ![](preview/gooey-balls-1-black-36.svg)    ![](preview/gooey-balls-2-black-36.svg)    ![](preview/tadpole-black-36.svg)    ![](preview/wifi-black-36.svg)    ![](preview/wifi-fade-black-36.svg)    ![](preview/wind-toy-black-36.svg)
+![](svg-css/bouncing-ball.svg)    ![](svg-css/clock.svg)    ![](svg-css/eclipse.svg)    ![](svg-css/eclipse-half.svg)    ![](svg-css/gooey-balls-1.svg)    ![](svg-css/gooey-balls-2.svg)    ![](svg-css/tadpole.svg)    ![](svg-css/wifi.svg)    ![](svg-css/wifi-fade.svg)    ![](svg-css/wind-toy.svg)
