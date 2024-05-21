@@ -2,7 +2,7 @@
 
 Taken from [Utkarsh Verma collection of svg spinners](https://github.com/n3r4zzurr0/svg-spinners.git)
 
-I have simplified the README and added an html page to provide a way to colorized the spinner through css filters.
+I have simplified the README and added an html page to provide a way to colorized the spinner through css filters (work in progress!).
 
 ## Rings
 
