@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/plain; charset=utf-8">
+    <title>SVG Spinners</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="cayman.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <style>
+    body {
+      background-color: #ffffff;
+    }
+
+    table,
+    td,
+    th {
+      /*border: 1px solid black;*/
+    }
+
+    td {
+      vertical-align: top;
+      padding: 10px;
+    }
+
+    .mine {
+      filter: brightness(0) saturate(100%) invert(67%) sepia(60%) saturate(597%) hue-rotate(181deg) brightness(96%) contrast(92%);
+      width: 80px;
+      height: 80px;
+    }
+  </style>
+  <body>
+    <table>
+      <tr>
+        <td> Background Color: <div>
+          <input type="color"  class="colorwheel__input">
+          </div>
+        </td>
+        <td> Color: <div style="display: flex; align-items: center;">
+            <input id="color-input" class="target" type="text" type="text" maxlength="18" value="#0000ff" oninput="validateColor(this.value)" />
+            <input id="color-radio" class="colorwheel__input" type="color" value="#0000ff"/>
+            <a id="action-button" class="btn3d btn-default action-button disabled" onclick="compute()">
+              <span>Get Filter!</span>
+            </a>
+          </div>
+        </td>
+        <td> Real pixel: <div class="color-wrapper">
+            <div id="realPixel" class="pixel"></div>
+            <div class="color-content">
+              <span class="copyable" data-clipboard-text="rgb(0, 0, 0)">
+                <b>RGB </b>
+                <code id="realPixelTextRGB">rgb(0, 0, 0)</code>
+                <span class="copy">Copy</span>
+                <span class="pos"></span>
+              </span>
+              <br />
+              <span class="copyable" data-clipboard-text="#000">
+                <b>HEX </b>
+                <code id="realPixelTextHEX">#000</code>
+                <span class="copy">Copy</span>
+                <span class="pos"></span>
+              </span>
+            </div>
+          </div>
+        </td>
+        <td> Filtered pixel <div class="color-wrapper">
+            <div id="filterPixel" class="pixel"></div>
+            <div class="color-content">
+              <span class="copyable" data-clipboard-text="filter: brightness(0) saturate(100%)">
+                <code id="filterPixelText">filter: brightness(0) saturate(100%)</code>
+                <span class="copy">Copy</span>
+                <span class="pos"></span>
+              </span>
+            </div>
+          </div>
+          <span id="lossDetail"> Loss: 0 </span>
+        </td>
+      </tr>
+    </table>
+    <h3>Rings</h3>
+    <img src="svg-css/90-ring.svg" class="mine">
+    <img src="svg-css/90-ring-with-bg.svg" class="mine">
+    <img src="svg-css/180-ring.svg" class="mine">
+    <img src="svg-css/180-ring-with-bg.svg" class="mine">
+    <img src="svg-css/270-ring.svg" class="mine">
+    <img src="svg-css/270-ring-with-bg.svg" class="mine">
+    <img src="svg-css/ring-resize.svg" class="mine">
+    <br />
+    <h3>Dots</h3>
+    <img src="svg-css/3-dots-bounce.svg" class="mine">
+    <img src="svg-css/3-dots-fade.svg" class="mine">
+    <img src="svg-css/3-dots-move.svg" class="mine">
+    <img src="svg-css/3-dots-rotate.svg" class="mine">
+    <img src="svg-css/3-dots-scale.svg" class="mine">
+    <img src="svg-css/3-dots-scale-middle.svg" class="mine">
+    <img src="svg-css/6-dots-rotate.svg" class="mine">
+    <img src="svg-css/6-dots-scale.svg" class="mine">
+    <img src="svg-css/6-dots-scale-middle.svg" class="mine">
+    <img src="svg-css/8-dots-rotate.svg" class="mine">
+    <img src="svg-css/12-dots-scale-rotate.svg" class="mine">
+    <img src="svg-css/dot-revolve.svg" class="mine">
+    <br />
+    <h3>Bars</h3>
+    <img src="svg-css/bars-fade.svg" class="mine">
+    <img src="svg-css/bars-scale.svg" class="mine">
+    <img src="svg-css/bars-scale-fade.svg" class="mine">
+    <img src="svg-css/bars-scale-middle.svg" class="mine">
+    <img src="svg-css/bars-rotate-fade.svg" class="mine">
+    <br />
+    <h3>Blocks</h3>
+    <img src="svg-css/blocks-scale.svg" class="mine">
+    <img src="svg-css/blocks-shuffle-2.svg" class="mine">
+    <img src="svg-css/blocks-shuffle-3.svg" class="mine">
+    <img src="svg-css/blocks-wave.svg" class="mine">
+    <br />
+    <h3>Pulses</h3>
+    <img src="svg-css/pulse.svg" class="mine">
+    <img src="svg-css/pulse-2.svg" class="mine">
+    <img src="svg-css/pulse-3.svg" class="mine">
+    <img src="svg-css/pulse-multiple.svg" class="mine">
+    <img src="svg-css/pulse-ring.svg" class="mine">
+    <img src="svg-css/pulse-rings-2.svg" class="mine">
+    <img src="svg-css/pulse-rings-3.svg" class="mine">
+    <img src="svg-css/pulse-rings-multiple.svg" class="mine">
+    <br />
+    <h3>Other</h3>
+    <img src="svg-css/bouncing-ball.svg" class="mine">
+    <img src="svg-css/clock.svg" class="mine">
+    <img src="svg-css/eclipse.svg" class="mine">
+    <img src="svg-css/eclipse-half.svg" class="mine">
+    <img src="svg-css/gooey-balls-1.svg" class="mine">
+    <img src="svg-css/gooey-balls-2.svg" class="mine">
+    <img src="svg-css/tadpole.svg" class="mine">
+    <img src="svg-css/wifi.svg" class="mine">
+    <img src="svg-css/wifi-fade.svg" class="mine">
+    <img src="svg-css/wind-toy.svg" class="mine">
+    <br />
+    <script src="clipboard.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
