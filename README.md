@@ -1,6 +1,8 @@
 ## <img src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/icon-48.gif" valign="middle">&nbsp;&nbsp;SVG Spinners colorized through css filter
 
-The spinner part is taken from [Utkarsh Verma/n3r4zzurr0](https://github.com/n3r4zzurr0/svg-spinners.git) and the filter part is taken from [Angel Rodriguez/angel-rs](https://github.com/angel-rs/css-color-filter-generator.git), thanks to them !
+The spinner part is taken from [Utkarsh Verma/n3r4zzurr0](https://github.com/n3r4zzurr0/svg-spinners.git) and the filter part from [Angel Rodriguez/angel-rs](https://github.com/angel-rs/css-color-filter-generator.git).
+
+Thanks to them !
 
 My contribution is to provide an html page in order to colorized the spinner through css filters.
 (And this is currently a work in progress!).
