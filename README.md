@@ -1,4 +1,4 @@
-## <img src="icon.png" valign="middle">&nbsp;&nbsp;SVG spinners colorized with css filter
+## <img src="icon.png" valign="middle">&nbsp;&nbsp;SVG spinners colored with css filter
 
 The spinner part comes from [Utkarsh Verma](https://github.com/n3r4zzurr0/svg-spinners.git) who took it from [Ephraim Duncan](https://github.com/ephraimduncan/react-svg-spinners).
 
