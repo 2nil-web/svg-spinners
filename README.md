@@ -1,4 +1,4 @@
-## <img src="icon-48.png" valign="middle">&nbsp;&nbsp;SVG Spinners colorized through css filter
+## <img src="icon-48.png" valign="middle">&nbsp;&nbsp;SVG Spinners colorized with css filter
 
 The spinner part is taken from [Utkarsh Verma/n3r4zzurr0](https://github.com/n3r4zzurr0/svg-spinners.git) and the filter part from [Angel Rodriguez/angel-rs](https://github.com/angel-rs/css-color-filter-generator.git).
 
