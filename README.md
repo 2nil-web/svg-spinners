@@ -18,7 +18,8 @@ Through the index.html page you can change the fill color of the spinners !
 
 And eventually the color of the body background ...
 
-
+### Example
+![](example.png)
 
 ## Spinners
 
