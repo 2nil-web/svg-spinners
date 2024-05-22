@@ -31,3 +31,11 @@ Download the repo, double click on "index.html" and you'll be able to change the
 ## Other
 
 ![](svg-css/bouncing-ball.svg)    ![](svg-css/clock.svg)    ![](svg-css/eclipse.svg)    ![](svg-css/eclipse-half.svg)    ![](svg-css/gooey-balls-1.svg)    ![](svg-css/gooey-balls-2.svg)    ![](svg-css/tadpole.svg)    ![](svg-css/wifi.svg)    ![](svg-css/wifi-fade.svg)    ![](svg-css/wind-toy.svg)
+
+
+
+# License
+
+Do what you want with that.
+
+MIT license I guess ...
