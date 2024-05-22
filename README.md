@@ -6,7 +6,7 @@ And the filter part comes from [Angel Rodriguez](https://github.com/angel-rs/css
 
 Thanks to them !
 
-My contribution is to provide an html page in order to colorized the spinner through css filters.
+My contribution is to provide an html page merging these features in order to allow to color the spinners through css filters.
 
 ## Install
 
