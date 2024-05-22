@@ -14,9 +14,9 @@ Download the repo, and double click on "index.html" file.
 
 ## Usage
 
-You can change the fill color of the svg spinners !
+THrough the index.html page you can change the fill color of the spinners !
 
-And also the color of the body background ...
+And eventually the color of the body background ...
 
 
 
