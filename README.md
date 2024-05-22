@@ -6,6 +6,8 @@ Thanks to them !
 
 My contribution is to provide an html page in order to colorized the spinner through css filters.
 
+Download this repo, double click on the "index.html" file and you'll see !
+
 ## Rings
 
 ![](svg-css/90-ring.svg)    ![](svg-css/90-ring-with-bg.svg)    ![](svg-css/180-ring.svg)    ![](svg-css/180-ring-with-bg.svg)    ![](svg-css/270-ring.svg)    ![](svg-css/270-ring-with-bg.svg)    ![](svg-css/ring-resize.svg)
