@@ -1,6 +1,6 @@
 ## <img src="icon-48.png" valign="middle">&nbsp;&nbsp;SVG Spinners colorized with css filter
 
-The spinner part comes from [Utkarsh Verma](https://github.com/n3r4zzurr0/svg-spinners.git) who took it from [Ephraim Duncan]([GitHub - ephraimduncan/react-svg-spinners: A React Component Library for SVG Spinners](https://github.com/ephraimduncan/react-svg-spinners)).
+The spinner part comes from [Utkarsh Verma](https://github.com/n3r4zzurr0/svg-spinners.git) who took it from [Ephraim Duncan](https://github.com/ephraimduncan/react-svg-spinners).
 
 And the filter part from [Angel Rodriguez](https://github.com/angel-rs/css-color-filter-generator.git).
 
