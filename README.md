@@ -2,7 +2,7 @@
 
 The spinner part comes from [Utkarsh Verma](https://github.com/n3r4zzurr0/svg-spinners.git) who took it from [Ephraim Duncan](https://github.com/ephraimduncan/react-svg-spinners).
 
-And the filter part from [Angel Rodriguez](https://github.com/angel-rs/css-color-filter-generator.git).
+And the filter part comes from [Angel Rodriguez](https://github.com/angel-rs/css-color-filter-generator.git).
 
 Thanks to them !
 
