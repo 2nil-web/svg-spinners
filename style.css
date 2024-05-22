@@ -28,20 +28,6 @@ a span {
 	user-select: none;
 }
 
-label {
-	position: absolute;
-	font-size: 1rem;
-	left: 0;
-	top: 50%;
-	transform: translateY(-50%);
-	background-color: white;
-	color: gray;
-	padding: 0 0.3rem;
-	margin: 0 0.5rem;
-	transition: .1s ease-out;
-	transform-origin: left top;
-	pointer-events: none;
-}
 
 input {
 	font-size: 1rem;

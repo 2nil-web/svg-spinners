@@ -372,14 +372,16 @@ function chgBG(val) {
   document.body.style.backgroundColor=val;
 }
 
-function computeVal(input) {
-  if (input == '') input='#000';
-  let rgb;
+function computeVal(hexVal) {
+  if (hexVal === '') hexVal='#000';
 
-  if (isHEXValid(input)) {
-    rgb = hexToRgb(input);
-  } else if (isRGBValid(input)) {
-    rgb = trimRgb(input);
+  let rgb;
+  //console.log(hexVal+", "+typeof hexVal);
+
+  if (isHEXValid(hexVal)) {
+    rgb = hexToRgb(hexVal);
+  } else if (isRGBValid(hexVal)) {
+    rgb = trimRgb(hexVal);
   }
 
   const color = new Color(rgb[0], rgb[1], rgb[2]);
@@ -414,14 +416,7 @@ function computeVal(input) {
   const rgbColor = color.toRgb();
   const hexColor = res.color.toHex();
 
-  filterPixel.style.filter = String(res.result.filterRaw);
-  filterPixel.style.webkitFilter = String(res.result.filterRaw);
-
-  filterPixelText.innerText = res.result.filter;
-  filterPixelText.parentElement.setAttribute(
-    "data-clipboard-text",
-    res.result.filter
-  );
+  filterPixelText.innerText = res.result.filterRaw;
 
   lossDetail.innerHTML = `Loss: ${res.result.loss.toFixed(1)}. <b>${
     res.lossMsg
@@ -430,6 +425,28 @@ function computeVal(input) {
 
 function compute() {
   computeVal(document.getElementById("color-input").value);
+}
+
+var colVal=0;
+function resetAuto(val) {
+  s=val.substring(1);
+  colVal=parseInt(val.substring(1), 16);
+}
+
+var acitv;
+function toggleCycle(cb) {
+  if (cb.checked) acitv=setInterval(autoCompute, 400);
+  else clearInterval(acitv);
+}
+
+function autoCompute() {
+  hVal=colVal.toString(16);
+  hVal='#'+String(hVal).padStart(6, '0')
+  computeVal(hVal);
+  colorInput.value=hVal;
+  colorRadio.value=hVal;
+  colVal++;//=256;
+  if (colVal > 16777215) colVal=0;
 }
 
 function isHEXValid(color) {
@@ -512,3 +529,4 @@ function onStart() {
 }
 
 onStart();
+

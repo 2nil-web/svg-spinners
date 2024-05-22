@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="cayman.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body onload="compute()">
+  <body>
     <table>
       <tr>
         <td>
@@ -19,23 +19,19 @@
           </div>
         </td>
         <td> Color for svg filter: <div style="display: flex; align-items: center;">
-            <input id="color-input" class="target" type="text" type="text" maxlength="18" value="#0000ff" oninput="computeVal(this.value)" />
-            <input id="color-radio" class="colorwheel__input" type="color" value="#0000ff" oninput="computeVal(this.value)"/>
+            <input id="color-input" class="target" type="text" type="text" maxlength="18" value="#0000ff" oninput="computeVal(this.value); resetAuto(this.value);" />
+            <input id="color-radio" class="colorwheel__input" type="color" value="#0000ff" oninput="computeVal(this.value); resetAuto(this.value);"/>
             <a id="action-button" class="btn3d btn-default action-button" onclick="compute()">
               <span>ReCompute Filter</span>
             </a>
           </div>
+            <label> <input type="checkbox" onclick="toggleCycle(this)"> Start cycling filter</label>
         </td>
-        <td> Resulting filtered pixel <div class="color-wrapper">
-            <div id="filterPixel" class="pixel"></div>
-            <div class="color-content">
-              <span class="copyable" data-clipboard-text="filter: brightness(0) saturate(100%)">
-                <code id="filterPixelText">filter: brightness(0) saturate(100%)</code>
-                <span class="copy">Copy</span>
-                <span class="pos"></span>
-              </span>
+        <!--td> Resulting filtered pixel <div class="color-wrapper"-->
+        <td> Resulting filter
+            <div id="filterPixel">
+                <code contenteditable="true" id="filterPixelText">brightness(0) saturate(100%)</code>
             </div>
-          </div>
           <span id="lossDetail"> Loss: 0 </span>
         </td>
       </tr>
