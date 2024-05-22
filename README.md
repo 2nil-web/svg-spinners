@@ -10,7 +10,7 @@ My contribution is to provide an html page in order to colorized the spinner thr
 
 ## Install
 
-Download the repo, and double click on "index.html" file.
+Download the repo and double click on the index.html file.
 
 ## Usage
 
