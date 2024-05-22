@@ -5,63 +5,24 @@
     <title>SVG Spinners</title>
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="cayman.css" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <style>
-    body {
-      background-color: #ffdddd;
-    }
-
-    table, td, th {
-      /*border: 1px solid black;*/
-    }
-
-    td {
-      vertical-align: top;
-      padding: 10px;
-    }
-
-    .filtered-color {
-      filter: brightness(0) saturate(100%) invert(10%) sepia(100%) saturate(6470%) hue-rotate(257deg) brightness(84%) contrast(135%);
-      width: 50px;
-      height: 50px;
-    }
-  </style>
-  <body>
+  <body onload="compute()">
     <table>
       <tr>
-        <td> Background: <div>
-            <input type="color" class="colorwheel__input" value="#ffdddd">
+        <td> Body&nbsp;background:<div>
+            <input type="color" class="colorwheel__input" value="#ffdddd" oninput="chgBG(this.value)">
           </div>
         </td>
-        <td> Color for filter: <div style="display: flex; align-items: center;">
-            <input id="color-input" class="target" type="text" type="text" maxlength="18" value="#0000ff" oninput="validateColor(this.value)" />
-            <input id="color-radio" class="colorwheel__input" type="color" value="#0000ff" />
-            <a id="action-button" class="btn3d btn-default action-button disabled" onclick="compute()">
-              <span>Get Filter!</span>
+        <td> Color for svg filter: <div style="display: flex; align-items: center;">
+            <input id="color-input" class="target" type="text" type="text" maxlength="18" value="#0000ff" oninput="computeVal(this.value)" />
+            <input id="color-radio" class="colorwheel__input" type="color" value="#0000ff" oninput="computeVal(this.value)"/>
+            <a id="action-button" class="btn3d btn-default action-button" onclick="compute()">
+              <span>ReCompute Filter</span>
             </a>
           </div>
         </td>
-        <td style="width: 0px; visibility: hidden;"> Real pixel: <div class="color-wrapper">
-            <div id="realPixel" class="pixel"></div>
-            <div class="color-content">
-              <span class="copyable" data-clipboard-text="rgb(0, 0, 0)">
-                <b>RGB </b>
-                <code id="realPixelTextRGB">rgb(0, 0, 0)</code>
-                <span class="copy">Copy</span>
-                <span class="pos"></span>
-              </span>
-              <br />
-              <span class="copyable" data-clipboard-text="#000">
-                <b>HEX </b>
-                <code id="realPixelTextHEX">#000</code>
-                <span class="copy">Copy</span>
-                <span class="pos"></span>
-              </span>
-            </div>
-          </div>
-        </td>
-        <td> Filtered pixel <div class="color-wrapper">
+        <td> Obtained filtered pixel <div class="color-wrapper">
             <div id="filterPixel" class="pixel"></div>
             <div class="color-content">
               <span class="copyable" data-clipboard-text="filter: brightness(0) saturate(100%)">
@@ -133,7 +94,7 @@
     <img src="svg-css/wifi-fade.svg" class="filtered-color">
     <img src="svg-css/wind-toy.svg" class="filtered-color">
     <br />
-    <script src="clipboard.min.js"></script>
+    <script src="clipboard.js"></script>
     <script src="index.js"></script>
   </body>
 </html>

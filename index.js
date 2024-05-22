@@ -3,11 +3,11 @@ const colorInput = document.getElementById("color-input");
 
 colorRadio.addEventListener("change", () => {
   colorInput.value = colorRadio.value;
-  validateColor(colorInput.value);
+  computeVal(colorInput.value);
 });
 
 colorInput.addEventListener("input", () => {
-  validateColor(colorInput.value);
+  computeVal(colorInput.value);
 
   switch (colorInput.value.length) {
     case 4:
@@ -59,6 +59,7 @@ function trimRgb(rgb) {
     .map((x) => parseInt(x));
   return [r, g, b];
 }
+
 
 class Color {
   constructor(r, g, b) {
@@ -367,22 +368,18 @@ class Solver {
   }
 }
 
-function compute() {
-  const input = document.getElementById("color-input").value;
+function chgBG(val) {
+  document.body.style.backgroundColor=val;
+}
+
+function computeVal(input) {
+  if (input == '') input='#000';
   let rgb;
 
   if (isHEXValid(input)) {
     rgb = hexToRgb(input);
   } else if (isRGBValid(input)) {
     rgb = trimRgb(input);
-  } else {
-    alert("Invalid format!");
-    return;
-  }
-
-  if (rgb.length !== 3) {
-    alert("Invalid format!");
-    return;
   }
 
   const color = new Color(rgb[0], rgb[1], rgb[2]);
@@ -395,6 +392,11 @@ function compute() {
     result,
     lossMsg,
   };
+
+  Array.from(document.getElementsByClassName('filtered-color')).forEach((elt) => {
+    elt.style['filter']=res.result.filterRaw;
+  });
+  
 
   if (res.result.loss < 1) {
     res.lossMsg = "This is a perfect result.";
@@ -409,17 +411,8 @@ function compute() {
   const filterPixel = document.getElementById("filterPixel");
   const filterPixelText = document.getElementById("filterPixelText");
   const lossDetail = document.getElementById("lossDetail");
-  const realPixel = document.getElementById("realPixel");
-  const realPixelTextRGB = document.getElementById("realPixelTextRGB");
-  const realPixelTextHEX = document.getElementById("realPixelTextHEX");
-  const rgbColor = res.color.toRgb();
+  const rgbColor = color.toRgb();
   const hexColor = res.color.toHex();
-
-  realPixel.style.backgroundColor = rgbColor;
-  realPixelTextRGB.innerText = rgbColor;
-  realPixelTextRGB.parentElement.setAttribute("data-clipboard-text", rgbColor);
-  realPixelTextHEX.innerText = hexColor;
-  realPixelTextHEX.parentElement.setAttribute("data-clipboard-text", hexColor);
 
   filterPixel.style.filter = String(res.result.filterRaw);
   filterPixel.style.webkitFilter = String(res.result.filterRaw);
@@ -433,6 +426,10 @@ function compute() {
   lossDetail.innerHTML = `Loss: ${res.result.loss.toFixed(1)}. <b>${
     res.lossMsg
   }</b>`;
+}
+
+function compute() {
+  computeVal(document.getElementById("color-input").value);
 }
 
 function isHEXValid(color) {
@@ -469,6 +466,7 @@ function isRGBValid(color) {
 }
 
 function validateColor(color) {
+  console.log("VAL");
   const submitButton = document.getElementById("action-button");
 
   if (isHEXValid(color) || isRGBValid(color)) {
