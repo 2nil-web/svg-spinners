@@ -14,7 +14,7 @@ Download the repo, and double click on "index.html" file.
 
 ## Usage
 
-THrough the index.html page you can change the fill color of the spinners !
+Through the index.html page you can change the fill color of the spinners !
 
 And eventually the color of the body background ...
 
