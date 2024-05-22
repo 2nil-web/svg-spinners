@@ -5,7 +5,6 @@ The spinner part is taken from [Utkarsh Verma/n3r4zzurr0](https://github.com/n3r
 Thanks to them !
 
 My contribution is to provide an html page in order to colorized the spinner through css filters.
-(And this is currently a work in progress!).
 
 ## Rings
 
