@@ -6,7 +6,7 @@ Thanks to them !
 
 My contribution is to provide an html page in order to colorized the spinner through css filters.
 
-Download this repo, double click on the "index.html" file and you'll be able to change the color of all the svg spinners !
+Download the repo, double click on "index.html" and you'll be able to change the color of the svg spinners !
 
 ## Rings
 
