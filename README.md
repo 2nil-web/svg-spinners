@@ -1,12 +1,14 @@
 ## <img src="icon-48.png" valign="middle">&nbsp;&nbsp;SVG Spinners colorized with css filter
 
-The spinner part is taken from [Utkarsh Verma/n3r4zzurr0](https://github.com/n3r4zzurr0/svg-spinners.git) and the filter part from [Angel Rodriguez/angel-rs](https://github.com/angel-rs/css-color-filter-generator.git).
+The spinner part comes from [Utkarsh Verma](https://github.com/n3r4zzurr0/svg-spinners.git) who took it from [Ephraim Duncan]([GitHub - ephraimduncan/react-svg-spinners: A React Component Library for SVG Spinners](https://github.com/ephraimduncan/react-svg-spinners)).
+
+And the filter part from [Angel Rodriguez](https://github.com/angel-rs/css-color-filter-generator.git).
 
 Thanks to them !
 
 My contribution is to provide an html page in order to colorized the spinner through css filters.
 
-Download the repo, double click on "index.html" and you'll be able to change the color of the svg spinners !
+Download the repo, double click on "index.html" and you'll be able to change the fill color of the svg spinners !
 
 ## Rings
 
@@ -31,8 +33,6 @@ Download the repo, double click on "index.html" and you'll be able to change the
 ## Other
 
 ![](svg-css/bouncing-ball.svg)    ![](svg-css/clock.svg)    ![](svg-css/eclipse.svg)    ![](svg-css/eclipse-half.svg)    ![](svg-css/gooey-balls-1.svg)    ![](svg-css/gooey-balls-2.svg)    ![](svg-css/tadpole.svg)    ![](svg-css/wifi.svg)    ![](svg-css/wifi-fade.svg)    ![](svg-css/wind-toy.svg)
-
-
 
 # License
 
