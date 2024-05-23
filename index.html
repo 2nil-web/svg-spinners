@@ -4,8 +4,6 @@
     <meta http-equiv="Content-Type" content="text/plain; charset=utf-8">
     <link rel="icon" href="icon.png">
     <title>SVG Spinners</title>
-    <link rel="stylesheet" href="normalize.css" />
-    <link rel="stylesheet" href="cayman.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -14,87 +12,38 @@
         <td>
           <img src="icon.png">
         </td>
-        <td> Body&nbsp;background:<div>
-            <input type="color" class="colorwheel__input" value="#ffdddd" oninput="chgBG(this.value)">
-          </div>
+        <td>
+          Body&nbsp;background:<br/>
+          <input type="color" id="color-bg" value="#ffdddd">
         </td>
-        <td> Color for svg filter: <div style="display: flex; align-items: center;">
-            <input id="color-input" class="target" type="text" type="text" maxlength="18" value="#0000ff" oninput="computeVal(this.value); resetAuto(this.value);" />
-            <input id="color-radio" class="colorwheel__input" type="color" value="#0000ff" oninput="computeVal(this.value); resetAuto(this.value);"/>
-            <a id="action-button" class="btn3d btn-default action-button" onclick="compute()">
-              <span>ReCompute Filter</span>
-            </a>
-          </div>
-            <label> <input type="checkbox" onclick="toggleCycle(this)"> Start cycling filter</label>
+        <td>
+          Color for svg filter:<br/>
+            <input id="color-input" type="text"  value="#0000ff"/>
+            <input id="color-radio" type="color" value="#0000ff"/>
+            <br/>
+            <input id="color-compute" type="button" value="ReCompute Filter">
+            <label>
+              <input id="color-toggle" type="checkbox">
+              Cycle filter
+            </label>
         </td>
-        <!--td> Resulting filtered pixel <div class="color-wrapper"-->
-        <td> Resulting filter
-            <div id="filterPixel">
-                <code contenteditable="true" id="filterPixelText">brightness(0) saturate(100%)</code>
-            </div>
-          <span id="lossDetail"> Loss: 0 </span>
+        <td style="width:70%"> Resulting filter
+          <input type="text" id="filter-pixel" value="brightness(0) saturate(100%)">
+          <span id="loss-detail"> Loss: 0 </span>
         </td>
       </tr>
     </table>
-    <h3>Rings</h3>
-    <img src="svg-css/90-ring.svg" class="filtered-color">
-    <img src="svg-css/90-ring-with-bg.svg" class="filtered-color">
-    <img src="svg-css/180-ring.svg" class="filtered-color">
-    <img src="svg-css/180-ring-with-bg.svg" class="filtered-color">
-    <img src="svg-css/270-ring.svg" class="filtered-color">
-    <img src="svg-css/270-ring-with-bg.svg" class="filtered-color">
-    <img src="svg-css/ring-resize.svg" class="filtered-color">
-    <br />
-    <h3>Dots</h3>
-    <img src="svg-css/3-dots-bounce.svg" class="filtered-color">
-    <img src="svg-css/3-dots-fade.svg" class="filtered-color">
-    <img src="svg-css/3-dots-move.svg" class="filtered-color">
-    <img src="svg-css/3-dots-rotate.svg" class="filtered-color">
-    <img src="svg-css/3-dots-scale.svg" class="filtered-color">
-    <img src="svg-css/3-dots-scale-middle.svg" class="filtered-color">
-    <img src="svg-css/6-dots-rotate.svg" class="filtered-color">
-    <img src="svg-css/6-dots-scale.svg" class="filtered-color">
-    <img src="svg-css/6-dots-scale-middle.svg" class="filtered-color">
-    <img src="svg-css/8-dots-rotate.svg" class="filtered-color">
-    <img src="svg-css/12-dots-scale-rotate.svg" class="filtered-color">
-    <img src="svg-css/dot-revolve.svg" class="filtered-color">
-    <br />
-    <h3>Bars</h3>
-    <img src="svg-css/bars-fade.svg" class="filtered-color">
-    <img src="svg-css/bars-scale.svg" class="filtered-color">
-    <img src="svg-css/bars-scale-fade.svg" class="filtered-color">
-    <img src="svg-css/bars-scale-middle.svg" class="filtered-color">
-    <img src="svg-css/bars-rotate-fade.svg" class="filtered-color">
-    <br />
-    <h3>Blocks</h3>
-    <img src="svg-css/blocks-scale.svg" class="filtered-color">
-    <img src="svg-css/blocks-shuffle-2.svg" class="filtered-color">
-    <img src="svg-css/blocks-shuffle-3.svg" class="filtered-color">
-    <img src="svg-css/blocks-wave.svg" class="filtered-color">
-    <br />
-    <h3>Pulses</h3>
-    <img src="svg-css/pulse.svg" class="filtered-color">
-    <img src="svg-css/pulse-2.svg" class="filtered-color">
-    <img src="svg-css/pulse-3.svg" class="filtered-color">
-    <img src="svg-css/pulse-multiple.svg" class="filtered-color">
-    <img src="svg-css/pulse-ring.svg" class="filtered-color">
-    <img src="svg-css/pulse-rings-2.svg" class="filtered-color">
-    <img src="svg-css/pulse-rings-3.svg" class="filtered-color">
-    <img src="svg-css/pulse-rings-multiple.svg" class="filtered-color">
-    <br />
-    <h3>Other</h3>
-    <img src="svg-css/bouncing-ball.svg" class="filtered-color">
-    <img src="svg-css/clock.svg" class="filtered-color">
-    <img src="svg-css/eclipse.svg" class="filtered-color">
-    <img src="svg-css/eclipse-half.svg" class="filtered-color">
-    <img src="svg-css/gooey-balls-1.svg" class="filtered-color">
-    <img src="svg-css/gooey-balls-2.svg" class="filtered-color">
-    <img src="svg-css/tadpole.svg" class="filtered-color">
-    <img src="svg-css/wifi.svg" class="filtered-color">
-    <img src="svg-css/wifi-fade.svg" class="filtered-color">
-    <img src="svg-css/wind-toy.svg" class="filtered-color">
-    <br />
-    <script src="clipboard.js"></script>
+    <script type="text/javascript">
+    function tit(s) { document.body.innerHTML+=`<br /><h3>${s}</h3>`; }
+    function src(id) { document.body.innerHTML+=`<img src="svg-css/${id}.svg" class="filtered-color">`; }
+    tit("Rings"); src("90-ring"); src("90-ring-with-bg"); src("180-ring"); src("180-ring-with-bg"); src("270-ring"); src("270-ring-with-bg"); src("ring-resize");
+    tit("Dots"); src("3-dots-bounce"); src("3-dots-fade"); src("3-dots-move"); src("3-dots-rotate"); src("3-dots-scale"); src("3-dots-scale-middle");
+      src("6-dots-rotate"); src("6-dots-scale"); src("6-dots-scale-middle"); src("8-dots-rotate"); src("12-dots-scale-rotate"); src("dot-revolve");
+    tit("Bars"); src("bars-fade"); src("bars-scale"); src("bars-scale-fade"); src("bars-scale-middle"); src("bars-rotate-fade");
+    tit("Blocks"); src("blocks-scale"); src("blocks-shuffle-2"); src("blocks-shuffle-3"); src("blocks-wave");
+    tit("Pulses"); src("pulse"); src("pulse-2"); src("pulse-3"); src("pulse-multiple"); src("pulse-ring"); src("pulse-rings-2"); src("pulse-rings-3"); src("pulse-rings-multiple");
+    tit("Other"); src("bouncing-ball"); src("clock"); src("eclipse"); src("eclipse-half"); src("gooey-balls-1"); src("gooey-balls-2"); src("tadpole"); src("wifi"); src("wifi-fade"); src("wind-toy");
+    </script>
     <script src="index.js"></script>
   </body>
 </html>

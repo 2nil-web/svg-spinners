@@ -1,26 +1,11 @@
-const colorRadio = document.getElementById("color-radio");
-const colorInput = document.getElementById("color-input");
 
-colorRadio.addEventListener("change", () => {
-  colorInput.value = colorRadio.value;
-  computeVal(colorInput.value);
-});
-
-colorInput.addEventListener("input", () => {
-  computeVal(colorInput.value);
-
-  switch (colorInput.value.length) {
-    case 4:
-      colorRadio.value = "#" + hexexpand(colorInput.value);
-      break;
-    case 7:
-      colorRadio.value = colorInput.value;
-      break;
-    default:
-      colorRadio.value = "#000000";
-      break;
-  }
-});
+const colorBg      = document.getElementById("color-bg");
+const colorInput   = document.getElementById("color-input");
+const colorRadio   = document.getElementById("color-radio");
+const colorCompute = document.getElementById("color-compute");
+const colorToggle  = document.getElementById("color-toggle");
+const filterPixel  = document.getElementById("filter-pixel");
+const lossDetail   = document.getElementById("loss-detail");
 
 // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
 function expandHex(hextexp) {
@@ -368,12 +353,15 @@ class Solver {
   }
 }
 
-function chgBG(val) {
-  document.body.style.backgroundColor=val;
-}
-
 function computeVal(hexVal) {
-  if (hexVal === '') hexVal='#000';
+  if (hexVal.startsWith('#')) {
+    hexVal=hexVal.substring(1);
+  }
+
+  if (hexVal === '') hexVal='0';
+  hexVal='#'+String(hexVal).padStart(6, '0')
+  
+  //console.log(hexVal);
 
   let rgb;
   //console.log(hexVal+", "+typeof hexVal);
@@ -410,41 +398,39 @@ function computeVal(hexVal) {
     res.lossMsg = "The color is extremely off. Run it again!";
   }
 
-  const filterPixel = document.getElementById("filterPixel");
-  const filterPixelText = document.getElementById("filterPixelText");
-  const lossDetail = document.getElementById("lossDetail");
   const rgbColor = color.toRgb();
   const hexColor = res.color.toHex();
 
-  filterPixelText.innerText = res.result.filterRaw;
+  //  console.log(typeof res.result.filterRaw);
+  console.log(res.result.filterRaw);
+  filterPixel.value=res.result.filterRaw;
 
-  lossDetail.innerHTML = `Loss: ${res.result.loss.toFixed(1)}. <b>${
-    res.lossMsg
-  }</b>`;
+  lossDetail.innerHTML = `Loss: ${res.result.loss.toFixed(1)}. <b>${ res.lossMsg }</b>`;
+
+  console.log("setattr:"+hexVal);
+  colorRadio.setAttribute('value', hexVal);
+  colorInput.setAttribute('value', hexVal);
 }
 
 function compute() {
-  computeVal(document.getElementById("color-input").value);
+  computeVal(colorInput.value);
 }
 
 var colVal=0;
 function resetAuto(val) {
+  computeVal(val.value);
   s=val.substring(1);
   colVal=parseInt(val.substring(1), 16);
-}
-
-var acitv;
-function toggleCycle(cb) {
-  if (cb.checked) acitv=setInterval(autoCompute, 400);
-  else clearInterval(acitv);
 }
 
 function autoCompute() {
   hVal=colVal.toString(16);
   hVal='#'+String(hVal).padStart(6, '0')
   computeVal(hVal);
-  colorInput.value=hVal;
-  colorRadio.value=hVal;
+  colorRadio.setAttribute('value', hVal);
+  colorInput.setAttribute('value', hVal);
+  //colorInput.value=hVal;
+  //colorRadio.value=hVal;
   colVal++;//=256;
   if (colVal > 16777215) colVal=0;
 }
@@ -482,51 +468,43 @@ function isRGBValid(color) {
   }
 }
 
-function validateColor(color) {
-  console.log("VAL");
-  const submitButton = document.getElementById("action-button");
+// The addEventListeners of elements MUST be decalred in the DOMContentLoaded
+document.addEventListener('DOMContentLoaded', function() {
+  colorBg.addEventListener("input", () => { document.body.style.backgroundColor=colorBg.value; });
 
-  if (isHEXValid(color) || isRGBValid(color)) {
-    submitButton.classList.remove("disabled");
-  } else if (!submitButton.classList.contains("disabled")) {
-    submitButton.classList.add("disabled");
-  }
-}
+  colorInput.addEventListener("input", () => {
+    //resetAuto(this.value);
+    computeVal(colorInput.value);
 
-function onStart() {
-  const initialColor = new URLSearchParams(document.location.search).get(
-    "color"
-  );
-  if (initialColor && isHEXValid(`#${initialColor}`)) {
-    document
-      .getElementById("color-input")
-      .setAttribute("value", `#${initialColor}`);
-    document
-      .getElementById("color-radio")
-      .setAttribute("value", `#${initialColor}`);
-    validateColor(`#${initialColor}`);
-    compute();
-  }
-
-  const copyableElements = document.querySelectorAll(".copyable");
-  const copyEl = document.querySelectorAll(".pos");
-
-  new ClipboardJS("span.copyable");
-
-  copyableElements.forEach((el, index) => {
-    el.addEventListener("click", () => {
-      copyEl[index].classList.add("copied");
-
-      setTimeout(() => {
-        copyEl[index].classList.remove("copied");
-      }, 1500);
-    });
+    switch (colorInput.value.length) {
+      case 4:
+        colorRadio.value = "#" + hexexpand(colorInput.value);
+        break;
+      case 7:
+        colorRadio.value = colorInput.value;
+        break;
+      default:
+        colorRadio.value = "#000000";
+        break;
+    }
   });
 
-  document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("color-input").removeAttribute("disabled");
+  colorRadio.addEventListener("input", e => {
+    colorInput.value = e.target.value;
+    computeVal(colorRadio.value);
   });
-}
 
-onStart();
+  colorCompute.addEventListener('click', () => { compute(); });
+
+  var acitv;
+  colorToggle.addEventListener('change', e => {
+    if (e.target.checked) acitv=setInterval(autoCompute, 400);
+    else clearInterval(acitv);
+  });
+
+  document.body.style.backgroundColor=colorBg.value;
+  compute();
+
+});
+
 
