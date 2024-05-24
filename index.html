@@ -8,19 +8,15 @@
   </head>
   <body>
     <table>
-      <thead>
         <tr>
-          <th></th>
-          <th>Body color</th>
-          <th>Filter color</th>
-          <th>Resulting svg filter</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
+          <th rowspan="2">
             <img src="icon.png">
-          </td>
+          </th>
+          <th>Background<br />colorfor body</th>
+          <th>Color for filter</th>
+          <th>Resulting filter applied to SVG</th>
+        </tr>
+        <tr>
           <td style="width: 120px;">
             <input type="text"  id="bg-input"  value="#0000ff"/>
             <input type="color" id="bg-button" value="#ffdddd">
@@ -40,7 +36,6 @@
             <span id="loss-detail"> Loss: 0 </span>
           </td>
         </tr>
-      </tbody>
     </table>
   </body>
     <script src="index.js"></script>

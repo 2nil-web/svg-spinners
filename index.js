@@ -485,7 +485,8 @@ function autoCompute() {
 }
 
 function getElem(elemName) {
-  var elem=document.getElementById(elemName);/*
+  var elem=document.getElementById(elemName);
+/*
   console.log(elemName+": "+typeof elem+", ["+elem.textContent+"], ["+elem.innerHTML+"]");
   console.log("IS ")
   if (elem != 'null') console.log("NOT ")
