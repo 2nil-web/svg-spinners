@@ -1,7 +1,7 @@
 
 const colorBg      = document.getElementById("color-bg");
 const colorInput   = document.getElementById("color-input");
-const colorRadio   = document.getElementById("color-radio");
+const colorButton   = document.getElementById("color-button");
 const colorCompute = document.getElementById("color-compute");
 const colorToggle  = document.getElementById("color-toggle");
 const filterPixel  = document.getElementById("filter-pixel");
@@ -407,32 +407,13 @@ function computeVal(hexVal) {
 
   lossDetail.innerHTML = `Loss: ${res.result.loss.toFixed(1)}. <b>${ res.lossMsg }</b>`;
 
-  console.log("setattr:"+hexVal);
-  colorRadio.setAttribute('value', hexVal);
-  colorInput.setAttribute('value', hexVal);
+//  console.log("setattr:"+hexVal);
+//  colorButton.setAttribute('value', hexVal);
+//  colorInput.setAttribute('value', hexVal);
 }
 
 function compute() {
   computeVal(colorInput.value);
-}
-
-var colVal=0;
-function resetAuto(val) {
-  computeVal(val.value);
-  s=val.substring(1);
-  colVal=parseInt(val.substring(1), 16);
-}
-
-function autoCompute() {
-  hVal=colVal.toString(16);
-  hVal='#'+String(hVal).padStart(6, '0')
-  computeVal(hVal);
-  colorRadio.setAttribute('value', hVal);
-  colorInput.setAttribute('value', hVal);
-  //colorInput.value=hVal;
-  //colorRadio.value=hVal;
-  colVal++;//=256;
-  if (colVal > 16777215) colVal=0;
 }
 
 function isHEXValid(color) {
@@ -468,30 +449,60 @@ function isRGBValid(color) {
   }
 }
 
-// The addEventListeners of elements MUST be decalred in the DOMContentLoaded
+/*
+if (!String.prototype.trimChar) {
+  String.prototype.trimChar = function trimChar(s, c) {
+    if (c === "]") c = "\\]";
+    if (c === "^") c = "\\^";
+    if (c === "\\") c = "\\\\";
+    return s.replace(new RegExp( "^[" + c + "]+|[" + c + "]+$", "g"), "");
+  };
+}
+*/
+function trimChar(s, c) {
+    if (c === "]") c = "\\]";
+    if (c === "^") c = "\\^";
+    if (c === "\\") c = "\\\\";
+    return s.replace(new RegExp( "^[" + c + "]+|[" + c + "]+$", "g"), "");
+}
+
+var colVal=0;
+function resetAuto(val) {
+  computeVal(val.value);
+  s=val.substring(1);
+  colVal=parseInt(val.substring(1), 16);
+}
+
+function autoCompute() {
+  hVal=colVal.toString(16);
+  hVal='#'+String(hVal).padStart(6, '0')
+  computeVal(hVal);
+  colorButton.setAttribute('value', hVal);
+  colorInput.setAttribute('value', hVal);
+  //colorInput.value=hVal;
+  //colorButton.value=hVal;
+  colVal++;//=256;
+  if (colVal > 16777215) colVal=0;
+}
+
+// addEventListeners of elements MUST be declared in the DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function() {
   colorBg.addEventListener("input", () => { document.body.style.backgroundColor=colorBg.value; });
 
   colorInput.addEventListener("input", () => {
-    //resetAuto(this.value);
+    var inpVal=colorInput.value.toString(16);
+    inpVal=trimChar(inpVal, '#');
+    inpVal=trimChar(inpVal, '0');
+    if (inpVal.length < 6) inpVal=String(inpVal).padStart(6, '0')
+    if (inpVal.length > 6) inpVal=inpVal.slice(0, 6);
+    if (!inpVal.startsWith('#')) inpVal='#'+inpVal;
+    colorInput.value=colorButton.value=inpVal;
     computeVal(colorInput.value);
-
-    switch (colorInput.value.length) {
-      case 4:
-        colorRadio.value = "#" + hexexpand(colorInput.value);
-        break;
-      case 7:
-        colorRadio.value = colorInput.value;
-        break;
-      default:
-        colorRadio.value = "#000000";
-        break;
-    }
   });
 
-  colorRadio.addEventListener("input", e => {
+  colorButton.addEventListener("input", e => {
     colorInput.value = e.target.value;
-    computeVal(colorRadio.value);
+    computeVal(colorButton.value);
   });
 
   colorCompute.addEventListener('click', () => { compute(); });
