@@ -402,7 +402,7 @@ function computeVal(hexVal) {
   const hexColor = res.color.toHex();
 
   //  console.log(typeof res.result.filterRaw);
-  console.log(res.result.filterRaw);
+  //console.log(res.result.filterRaw);
   filterPixel.value=res.result.filterRaw;
 
   lossDetail.innerHTML = `Loss: ${res.result.loss.toFixed(1)}. <b>${ res.lossMsg }</b>`;
@@ -449,40 +449,46 @@ function isRGBValid(color) {
   }
 }
 
-/*
-if (!String.prototype.trimChar) {
-  String.prototype.trimChar = function trimChar(s, c) {
+function leftTrimChar(s, c) {
     if (c === "]") c = "\\]";
     if (c === "^") c = "\\^";
     if (c === "\\") c = "\\\\";
-    return s.replace(new RegExp( "^[" + c + "]+|[" + c + "]+$", "g"), "");
-  };
-}
-*/
-function trimChar(s, c) {
-    if (c === "]") c = "\\]";
-    if (c === "^") c = "\\^";
-    if (c === "\\") c = "\\\\";
-    return s.replace(new RegExp( "^[" + c + "]+|[" + c + "]+$", "g"), "");
+    return s.replace(new RegExp( "^(" + c + ")+", "g"), "");
 }
 
-var colVal=0;
-function resetAuto(val) {
-  computeVal(val.value);
-  s=val.substring(1);
-  colVal=parseInt(val.substring(1), 16);
+function validateRgbString(s) {
+  var inpVal=s.toString(16);
+  inpVal=leftTrimChar(inpVal, '#');
+  inpVal=leftTrimChar(inpVal, '0');
+  if (inpVal.length < 6) inpVal=String(inpVal).padStart(6, '0')
+  if (inpVal.length > 6) inpVal=inpVal.slice(0, 6);
+  if (!inpVal.startsWith('#')) inpVal='#'+inpVal;
+  return inpVal;
+}
+
+
+function numToRgbString(n) {
+  return '#'+n.toString(16).padStart(6, '0');
+}
+
+function rgbStringToNum(s) {
+  var inpVal=s.toString(16);
+  inpVal=leftTrimChar(inpVal, '#');
+  inpVal=leftTrimChar(inpVal, '0');
+  if (inpVal.length < 6) inpVal=String(inpVal).padStart(6, '0')
+  if (inpVal.length > 6) inpVal=inpVal.slice(0, 6);
+  if (!inpVal.startsWith('0x')) inpVal='0x'+inpVal;
+  return Number(inpVal);
+
 }
 
 function autoCompute() {
-  hVal=colVal.toString(16);
-  hVal='#'+String(hVal).padStart(6, '0')
-  computeVal(hVal);
-  colorButton.setAttribute('value', hVal);
-  colorInput.setAttribute('value', hVal);
-  //colorInput.value=hVal;
-  //colorButton.value=hVal;
-  colVal++;//=256;
-  if (colVal > 16777215) colVal=0;
+  n=rgbStringToNum(colorInput.value);
+  n+=10;
+  if (n > 16777215) n=0;
+  s=numToRgbString(n);
+  computeVal(s);
+  colorInput.value=colorButton.value=s;
 }
 
 // addEventListeners of elements MUST be declared in the DOMContentLoaded
@@ -490,13 +496,7 @@ document.addEventListener('DOMContentLoaded', function() {
   colorBg.addEventListener("input", () => { document.body.style.backgroundColor=colorBg.value; });
 
   colorInput.addEventListener("input", () => {
-    var inpVal=colorInput.value.toString(16);
-    inpVal=trimChar(inpVal, '#');
-    inpVal=trimChar(inpVal, '0');
-    if (inpVal.length < 6) inpVal=String(inpVal).padStart(6, '0')
-    if (inpVal.length > 6) inpVal=inpVal.slice(0, 6);
-    if (!inpVal.startsWith('#')) inpVal='#'+inpVal;
-    colorInput.value=colorButton.value=inpVal;
+    colorInput.value=colorButton.value=validateRgbString(colorInput.value);
     computeVal(colorInput.value);
   });
 
