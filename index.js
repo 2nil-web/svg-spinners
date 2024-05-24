@@ -1,11 +1,4 @@
-
-const colorBg      = document.getElementById("color-bg");
-const colorInput   = document.getElementById("color-input");
-const colorButton   = document.getElementById("color-button");
-const colorCompute = document.getElementById("color-compute");
-const colorToggle  = document.getElementById("color-toggle");
-const filterPixel  = document.getElementById("filter-pixel");
-const lossDetail   = document.getElementById("loss-detail");
+var bgInput, bgButton, colorInput, colorButton, colorCompute, colorToggle, filterPixel, lossDetail;
 
 // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
 function expandHex(hextexp) {
@@ -491,31 +484,75 @@ function autoCompute() {
   colorInput.value=colorButton.value=s;
 }
 
-// addEventListeners of elements MUST be declared in the DOMContentLoaded
-document.addEventListener('DOMContentLoaded', function() {
-  colorBg.addEventListener("input", () => { document.body.style.backgroundColor=colorBg.value; });
+function getElem(elemName) {
+  var elem=document.getElementById(elemName);/*
+  console.log(elemName+": "+typeof elem+", ["+elem.textContent+"], ["+elem.innerHTML+"]");
+  console.log("IS ")
+  if (elem != 'null') console.log("NOT ")
+  console.log("NULL ")
+*/
+  return elem;
+}
 
-  colorInput.addEventListener("input", () => {
+// addEventListeners of elements MUST be declared in the DOMContentLoaded
+function onReady() {
+  function tit(s) { document.body.innerHTML+=`<br /><h3>${s}</h3>`; }
+  function src(id) { document.body.innerHTML+=`<img src="svg-css/${id}.svg" class="filtered-color">`; }
+  tit("Rings"); src("90-ring"); src("90-ring-with-bg"); src("180-ring"); src("180-ring-with-bg"); src("270-ring"); src("270-ring-with-bg"); src("ring-resize");
+  tit("Dots"); src("3-dots-bounce"); src("3-dots-fade"); src("3-dots-move"); src("3-dots-rotate"); src("3-dots-scale"); src("3-dots-scale-middle");
+    src("6-dots-rotate"); src("6-dots-scale"); src("6-dots-scale-middle"); src("8-dots-rotate"); src("12-dots-scale-rotate"); src("dot-revolve");
+  tit("Bars"); src("bars-fade"); src("bars-scale"); src("bars-scale-fade"); src("bars-scale-middle"); src("bars-rotate-fade");
+  tit("Blocks"); src("blocks-scale"); src("blocks-shuffle-2"); src("blocks-shuffle-3"); src("blocks-wave");
+  tit("Pulses"); src("pulse"); src("pulse-2"); src("pulse-3"); src("pulse-multiple"); src("pulse-ring"); src("pulse-rings-2"); src("pulse-rings-3"); src("pulse-rings-multiple");
+  tit("Other"); src("bouncing-ball"); src("clock"); src("eclipse"); src("eclipse-half"); src("gooey-balls-1"); src("gooey-balls-2"); src("tadpole"); src("wifi"); src("wifi-fade"); src("wind-toy");
+
+  bgInput      = getElem("bg-input");
+  bgButton     = getElem("bg-button");
+  colorInput   = getElem("color-input");
+  colorButton  = getElem("color-button");
+  colorCompute = getElem("color-compute");
+  colorToggle  = getElem("color-toggle");
+  filterPixel  = getElem("filter-pixel");
+  lossDetail   = getElem("loss-detail");
+
+  document.body.style.backgroundColor=bgButton.value;
+
+  bgInput.addEventListener("input", (e) => {
+    bgInput.value=bgButton.value=validateRgbString(bgInput.value);
+    document.body.style.backgroundColor=bgButton.value;
+  });
+
+  bgButton.addEventListener("input", (e) => {
+    bgInput.value = e.target.value;
+    document.body.style.backgroundColor=bgButton.value;
+  });
+
+  colorInput.addEventListener("input", (e) => {
     colorInput.value=colorButton.value=validateRgbString(colorInput.value);
     computeVal(colorInput.value);
   });
 
-  colorButton.addEventListener("input", e => {
+  colorButton.addEventListener("input", (e) => {
     colorInput.value = e.target.value;
     computeVal(colorButton.value);
   });
 
-  colorCompute.addEventListener('click', () => { compute(); });
+  colorCompute.addEventListener('click', (e) => {
+    compute();
+  });
 
   var acitv;
-  colorToggle.addEventListener('change', e => {
+  colorToggle.addEventListener('change', (e) => {
     if (e.target.checked) acitv=setInterval(autoCompute, 400);
     else clearInterval(acitv);
   });
 
-  document.body.style.backgroundColor=colorBg.value;
   compute();
+}
 
-});
-
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", onReady);
+} else {
+  onReady(); // Or setTimeout(onReady, 0); if you want it consistently async
+}
 

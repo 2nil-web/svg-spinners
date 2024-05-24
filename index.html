@@ -8,42 +8,41 @@
   </head>
   <body>
     <table>
-      <tr>
-        <td>
-          <img src="icon.png">
-        </td>
-        <td>
-          Body&nbsp;background:<br/>
-          <input type="color" id="color-bg" value="#ffdddd">
-        </td>
-        <td>
-          Color for svg filter:<br/>
-            <input id="color-input" type="text"  value="#0000ff"/>
-            <input id="color-button" type="color" value="#0000ff"/>
-            <br/>
-            <input id="color-compute" type="button" value="ReCompute Filter">
-            <label>
-              <input id="color-toggle" type="checkbox">
-              Cycle filter
-            </label>
-        </td>
-        <td style="width:70%"> Resulting filter
-          <input type="text" id="filter-pixel" value="brightness(0) saturate(100%)">
-          <span id="loss-detail"> Loss: 0 </span>
-        </td>
-      </tr>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Body color</th>
+          <th>Filter color</th>
+          <th>Resulting svg filter</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <img src="icon.png">
+          </td>
+          <td style="width: 120px;">
+            <input type="text"  id="bg-input"  value="#0000ff"/>
+            <input type="color" id="bg-button" value="#ffdddd">
+          </td>
+          <td style="width: 120px;">
+              <input type="text"  id="color-input"  value="#0000ff"/>
+              <input type="color" id="color-button" value="#0000ff"/>
+              <br/>
+              <input id="color-compute" type="button" value="ReCompute Filter"><br />
+              <label>
+                <input id="color-toggle" type="checkbox">
+                Cycle filter
+              </label>
+          </td>
+          <td>
+            <input type="text" id="filter-pixel">
+            <span id="loss-detail"> Loss: 0 </span>
+          </td>
+        </tr>
+      </tbody>
     </table>
-    <script type="text/javascript">
-    function tit(s) { document.body.innerHTML+=`<br /><h3>${s}</h3>`; }
-    function src(id) { document.body.innerHTML+=`<img src="svg-css/${id}.svg" class="filtered-color">`; }
-    tit("Rings"); src("90-ring"); src("90-ring-with-bg"); src("180-ring"); src("180-ring-with-bg"); src("270-ring"); src("270-ring-with-bg"); src("ring-resize");
-    tit("Dots"); src("3-dots-bounce"); src("3-dots-fade"); src("3-dots-move"); src("3-dots-rotate"); src("3-dots-scale"); src("3-dots-scale-middle");
-      src("6-dots-rotate"); src("6-dots-scale"); src("6-dots-scale-middle"); src("8-dots-rotate"); src("12-dots-scale-rotate"); src("dot-revolve");
-    tit("Bars"); src("bars-fade"); src("bars-scale"); src("bars-scale-fade"); src("bars-scale-middle"); src("bars-rotate-fade");
-    tit("Blocks"); src("blocks-scale"); src("blocks-shuffle-2"); src("blocks-shuffle-3"); src("blocks-wave");
-    tit("Pulses"); src("pulse"); src("pulse-2"); src("pulse-3"); src("pulse-multiple"); src("pulse-ring"); src("pulse-rings-2"); src("pulse-rings-3"); src("pulse-rings-multiple");
-    tit("Other"); src("bouncing-ball"); src("clock"); src("eclipse"); src("eclipse-half"); src("gooey-balls-1"); src("gooey-balls-2"); src("tadpole"); src("wifi"); src("wifi-fade"); src("wind-toy");
-    </script>
-    <script src="index.js"></script>
   </body>
+    <script src="index.js"></script>
 </html>
+
