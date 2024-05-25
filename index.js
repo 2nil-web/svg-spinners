@@ -1,4 +1,7 @@
+
 var bgInput, bgButton, colorInput, colorButton, colorCompute, colorToggle, filterPixel, lossDetail;
+
+var autoComputeInterval=-1;
 
 // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
 function expandHex(hextexp) {
@@ -398,15 +401,34 @@ function computeVal(hexVal) {
   //console.log(res.result.filterRaw);
   filterPixel.value=res.result.filterRaw;
 
-  lossDetail.innerHTML = `Loss: ${res.result.loss.toFixed(1)}. <b>${ res.lossMsg }</b>`;
+  lossDetail.innerHTML = `Loss: ${res.result.loss.toFixed(3)}. <b>${ res.lossMsg }</b>`;
 
-//  console.log("setattr:"+hexVal);
-//  colorButton.setAttribute('value', hexVal);
-//  colorInput.setAttribute('value', hexVal);
+  return [ res.result.loss, res.lossMsg, res.result.filterRaw ];
 }
 
 function compute() {
-  computeVal(colorInput.value);
+  if (autoComputeInterval < 0) {
+    var lossV=100, lossS="", filterS="";
+    nLoop=39;
+    for (i=0; i < nLoop; i++) {
+      [ tmpLossV, tmpLossS, tmpFilterS ]=computeVal(colorInput.value);
+
+      if (tmpLossV < lossV) {
+        lossV=tmpLossV;
+        lossS=tmpLossS;
+        filterS=tmpFilterS;
+      }
+      if (lossV.toFixed(5) == 0) break;
+      //if (lossV == 0) break;
+    }
+    i++;
+    filterPixel.value=filterS;
+    lossDetail.innerHTML=`In ${i} loops, Loss: ${lossV.toFixed(1)}. <b>${ lossS }</b>`;
+    console.log("loss="+lossV);
+
+  } else {
+    computeVal(colorInput.value);
+  }
 }
 
 function isHEXValid(color) {
@@ -484,21 +506,10 @@ function autoCompute() {
   colorInput.value=colorButton.value=s;
 }
 
-function getElem(elemName) {
-  var elem=document.getElementById(elemName);
-/*
-  console.log(elemName+": "+typeof elem+", ["+elem.textContent+"], ["+elem.innerHTML+"]");
-  console.log("IS ")
-  if (elem != 'null') console.log("NOT ")
-  console.log("NULL ")
-*/
-  return elem;
-}
-
 // addEventListeners of elements MUST be declared in the DOMContentLoaded
 function onReady() {
   function tit(s) { document.body.innerHTML+=`<br /><h3>${s}</h3>`; }
-  function src(id) { document.body.innerHTML+=`<img src="svg-css/${id}.svg" class="filtered-color">`; }
+  function src(id) { document.body.innerHTML+=`<img src="svg-css/${id}.svg" class="filtered-color" title="svg-css/${id}.svg">`; }
   tit("Rings"); src("90-ring"); src("90-ring-with-bg"); src("180-ring"); src("180-ring-with-bg"); src("270-ring"); src("270-ring-with-bg"); src("ring-resize");
   tit("Dots"); src("3-dots-bounce"); src("3-dots-fade"); src("3-dots-move"); src("3-dots-rotate"); src("3-dots-scale"); src("3-dots-scale-middle");
     src("6-dots-rotate"); src("6-dots-scale"); src("6-dots-scale-middle"); src("8-dots-rotate"); src("12-dots-scale-rotate"); src("dot-revolve");
@@ -507,14 +518,14 @@ function onReady() {
   tit("Pulses"); src("pulse"); src("pulse-2"); src("pulse-3"); src("pulse-multiple"); src("pulse-ring"); src("pulse-rings-2"); src("pulse-rings-3"); src("pulse-rings-multiple");
   tit("Other"); src("bouncing-ball"); src("clock"); src("eclipse"); src("eclipse-half"); src("gooey-balls-1"); src("gooey-balls-2"); src("tadpole"); src("wifi"); src("wifi-fade"); src("wind-toy");
 
-  bgInput      = getElem("bg-input");
-  bgButton     = getElem("bg-button");
-  colorInput   = getElem("color-input");
-  colorButton  = getElem("color-button");
-  colorCompute = getElem("color-compute");
-  colorToggle  = getElem("color-toggle");
-  filterPixel  = getElem("filter-pixel");
-  lossDetail   = getElem("loss-detail");
+  bgInput      = document.getElementById("bg-input");
+  bgButton     = document.getElementById("bg-button");
+  colorInput   = document.getElementById("color-input");
+  colorButton  = document.getElementById("color-button");
+  colorCompute = document.getElementById("color-compute");
+  colorToggle  = document.getElementById("color-toggle");
+  filterPixel  = document.getElementById("filter-pixel");
+  lossDetail   = document.getElementById("loss-detail");
 
   document.body.style.backgroundColor=bgButton.value;
 
@@ -542,10 +553,15 @@ function onReady() {
     compute();
   });
 
-  var acitv;
   colorToggle.addEventListener('change', (e) => {
-    if (e.target.checked) acitv=setInterval(autoCompute, 400);
-    else clearInterval(acitv);
+    if (e.target.checked) {
+      autoComputeInterval=setInterval(autoCompute, 400);
+      colorCompute.disabled=true;
+    } else {
+      clearInterval(autoComputeInterval);
+      autoComputeInterval=-1;
+      colorCompute.disabled=false;
+    }
   });
 
   compute();
