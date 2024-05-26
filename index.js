@@ -509,7 +509,60 @@ function autoCompute() {
 // addEventListeners of elements MUST be declared in the DOMContentLoaded
 function onReady() {
   function tit(s) { document.body.innerHTML+=`<br /><h3>${s}</h3>`; }
-  function src(id) { document.body.innerHTML+=`<img src="svg-css/${id}.svg" class="filtered-color" title="svg-css/${id}.svg">`; }
+  function src(id, fld="", cl="", st="") {
+    if (fld == "") fld="svg-css";
+ 
+    htm=`<a href="${fld}/${id}.svg"><img src="${fld}/${id}.svg" title="${fld}/${id}.svg"`;
+    if (cl == "") cl='filtered-color';
+    if(cl != '-') htm+=` class="${cl}"`;
+    if (st != "") htm+=` style="${st}"`;
+    htm+='></a>'
+    console.log(htm);
+    document.body.innerHTML+=htm;
+    //document.body.innerHTML+=`<img src="svg-css/${id}.svg" class="${cla}" style="${cl}" title="svg-css/${id}.svg">`;
+  }
+
+  cuSty='width:128px; height:128px;border:1px solid black; margin-right:10px;'
+
+  tit("freesvg (with rotation)");
+   src("1310677699", "freesvg", '-', cuSty);
+   src("1537138550", "freesvg", '-', cuSty);
+   src("Prismatic-Abstract-Flower-Line-Art-II-4", "freesvg", '-', cuSty);
+   src("cgrd4", "freesvg", '-', cuSty);
+   src("circle-evolvent2", "freesvg", '-', cuSty);
+   src("circulo-cromatico", "freesvg", '-', cuSty);
+   src("6-blade-prop", "freesvg", '-', cuSty);
+   src("shiny-balls", "freesvg", '-', cuSty);
+
+  tit("wjschne.github.io (with rotation)");
+   src("blurry_circles", "wjschne", '-', cuSty);
+   src("root3b", "wjschne", '-', cuSty);
+   src("six_points_rainbow", "wjschne", '-', cuSty);
+   src("hsv_stripes", "wjschne", '-', cuSty);
+
+  tit("SVG Background");
+   src("bouncing-squares", "svg-bg");
+   src("fade-stagger-circles", "svg-bg");
+   src("fade-stagger-squares", "svg-bg");
+   src("gear-spinner", "svg-bg");
+   //src("gears-spinner", "svg-bg");
+   src("infinite-spinner", "svg-bg");
+   src("motion-blur-2", "svg-bg");
+
+  tit("Sam Herbert");
+   src("audio", "SamHerbert");
+   src("ball-triangle", "SamHerbert");
+   src("bars", "SamHerbert");
+   src("circles", "SamHerbert");
+   src("grid", "SamHerbert");
+   src("hearts", "SamHerbert");
+   src("oval", "SamHerbert");
+   src("puff", "SamHerbert");
+   src("rings", "SamHerbert");
+   src("spinning-circles", "SamHerbert");
+   src("tail-spin", "SamHerbert");
+   src("three-dots", "SamHerbert");
+
   tit("Rings"); src("90-ring"); src("90-ring-with-bg"); src("180-ring"); src("180-ring-with-bg"); src("270-ring"); src("270-ring-with-bg"); src("ring-resize");
   tit("Dots"); src("3-dots-bounce"); src("3-dots-fade"); src("3-dots-move"); src("3-dots-rotate"); src("3-dots-scale"); src("3-dots-scale-middle");
     src("6-dots-rotate"); src("6-dots-scale"); src("6-dots-scale-middle"); src("8-dots-rotate"); src("12-dots-scale-rotate"); src("dot-revolve");
@@ -517,6 +570,8 @@ function onReady() {
   tit("Blocks"); src("blocks-scale"); src("blocks-shuffle-2"); src("blocks-shuffle-3"); src("blocks-wave");
   tit("Pulses"); src("pulse"); src("pulse-2"); src("pulse-3"); src("pulse-multiple"); src("pulse-ring"); src("pulse-rings-2"); src("pulse-rings-3"); src("pulse-rings-multiple");
   tit("Other"); src("bouncing-ball"); src("clock"); src("eclipse"); src("eclipse-half"); src("gooey-balls-1"); src("gooey-balls-2"); src("tadpole"); src("wifi"); src("wifi-fade"); src("wind-toy");
+
+  //tit("Evil icons"); src("evil-Icons", "", "-", "width:'512px; height:512px;'");
 
   bgInput      = document.getElementById("bg-input");
   bgButton     = document.getElementById("bg-button");
