@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1012" height="864" version="1.1" viewBox="0 0 1012 864" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <style>.spin{transform-origin:center;animation:rot 1.5s linear infinite}@keyframes rot{100%{transform:rotate(-360deg)}}</style>
+ <g class="spin">
+ <defs>
+  <filter id="filter3298" x="-.23904" y="-.23406" width="1.4779" height="1.4713">
+   <feGaussianBlur stdDeviation="4.6970312499999993"/>
+  </filter>
+  <linearGradient id="linearGradient3312" x1="529.36" x2="548.23" y1="401.49" y2="383.81" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#fff" offset="0"/>
+   <stop stop-color="#fff" stop-opacity="0" offset="1"/>
+  </linearGradient>
+ </defs>
+ <path transform="matrix(1.1004,0,0,1.1004,-82.403,-48.315)" d="m602.12 437.3a68.52 68.52 0 1 1-137.04 0 68.52 68.52 0 1 1 137.04 0z"/>
+ <g opacity=".66667">
+  <path transform="matrix(1.2641 .18993 -.19205 1.2737 -56.272 -208.27)" d="m504.99 431.65c-5.2124-10.536 19.635-45.825 26.233-49.494 9.3981-2.2654 22.707 10.404 21.757 20.218-15.858 10.079-32.677 19.751-47.99 29.276z" fill="url(#linearGradient3312)" filter="url(#filter3298)" opacity="1" stroke="#000" stroke-width=".7424px"/>
+ </g>
+ <path d="m576.13 407.08c117.96-22.662 340.26-21.417 343.15 65.293-0.33735 5.7282-4.0146 5.2912-7.8004 5.0641-225.35-22.246-317.35 5.1734-318.74 2.4973-2.2504-4.3245-3.4536-14.043-7.0603-28.2h-7.6389c3.2878-17.273 2.2048-27.701-1.9071-44.654z" fill="#333"/>
+ <path d="m599.62 403.08 2.423 23.711c34.045-9.3988 79.237-18.409 149.71-15.23l-1.5576-16.096c-53.531-0.79528-106.13-1.1347-150.57 7.6152z"/>
+ <path d="m750.19 395.63 0.51921 4.1537c129.87 5.9466 156.31 42.165 159.57 64.383 1.5027 5.0918 3.0887 10.054 8.6536 8.8267-1.042-11.778-0.0211-69.062-168.74-77.363z" fill="#ccc"/>
+ <g font-family="Sans" letter-spacing="0px" word-spacing="0px">
+  <text transform="rotate(86.62)" x="483.04224" y="-616.59625" fill="#ffffff" font-size="1.5882px" text-align="center" text-anchor="middle" line-height="84%" xml:space="preserve">         <tspan x="483.04224" y="-616.59625" text-align="center" line-height="84%">lskjiahdjskdfd</tspan>         <tspan x="483.04224" y="-615.26215" text-align="center" line-height="84%">sdjsfasssjwei</tspan>         <tspan x="483.04224" y="-613.92804" text-align="center" line-height="84%">sdflsskjs      eisksf</tspan>      </text>
+  <text transform="matrix(.055428 .99846 -.99846 .055428 0 0)" x="472.35757" y="-620.38995" fill="#000000" font-size="4.3687px" line-height="125%" xml:space="preserve">         <tspan x="472.35757" y="-620.38995" fill="#ffffff" font-family="'Enter Sansman'" font-weight="bold" letter-spacing="-.10922px">DOWTY</tspan>      </text>
+ </g>
+ <path d="m562.57 481.32c79.459 90.082 191.34 282.17 118.13 328.72-5.105 2.6202-6.5971-0.76906-8.3252-4.1451-95.35-205.39-165.71-270.69-164.11-273.25 2.5811-4.1356 10.34-10.11 20.701-20.41l-3.8816-6.5792c16.548-5.9454 24.978-12.177 37.49-24.333z" fill="#333"/>
+ <path d="m577.95 499.51-19.19 14.135c25.395 24.547 56.118 58.891 89.189 121.2l13.071-9.5203c-26.52-46.51-52.95-91.99-83.07-125.81z"/>
+ <path d="m660.87 625.41-3.3137 2.5578c60.868 114.87 43.112 156.06 25.632 170.15-3.6219 3.8815-7.0897 7.7689-3.205 11.938 9.6144-6.8821 59.471-35.111-19.114-184.65z" fill="#ccc"/>
+ <g font-family="Sans" letter-spacing="0px" word-spacing="0px">
+  <text transform="rotate(146.08)" x="-155.52618" y="-778.85547" fill="#ffffff" font-size="1.5882px" text-align="center" text-anchor="middle" line-height="84%" xml:space="preserve">         <tspan x="-155.52618" y="-778.85547" text-align="center" line-height="84%">lskjiahdjskdfd</tspan>         <tspan x="-155.52618" y="-777.52136" text-align="center" line-height="84%">sdjsfasssjwei</tspan>         <tspan x="-155.52618" y="-776.18726" text-align="center" line-height="84%">sdflsskjs      eisksf</tspan>      </text>
+  <text transform="rotate(146.28)" x="-166.79469" y="-780.33337" fill="#000000" font-size="4.3687px" line-height="125%" xml:space="preserve">         <tspan x="-166.79469" y="-780.33337" fill="#ffffff" font-family="'Enter Sansman'" font-weight="bold" letter-spacing="-.10922px">DOWTY</tspan>      </text>
+ </g>
+ <path d="m491.08 507.85c-40.67 113.03-155.13 303.59-231.19 261.85-4.755-3.212-2.5033-6.152-0.37692-9.2924 134.09-182.49 157.43-275.6 160.44-275.43 4.8675 0.27021 13.84 4.1924 27.857 8.3115l3.8964-6.5704c13.18 11.639 22.702 16.026 39.381 21.137z" fill="#333"/>
+ <path d="m482.55 530.1-21.63-10.01c-9.2817 34.078-24.583 77.544-63.262 136.54l14.639 6.8703c27.989-45.637 55.112-90.709 70.254-133.4z"/>
+ <path d="m412.15 663.4-3.8376-1.6721c-71.357 108.67-116 112.94-136.77 104.41-5.1461-1.3047-10.223-2.4716-12.006 2.9409 10.662 5.1113 59.413 35.209 152.62-105.68z" fill="#ccc"/>
+ <g font-family="Sans" letter-spacing="0px" word-spacing="0px">
+  <text transform="rotate(207.28)" x="-626.59705" y="-291.74377" fill="#ffffff" font-size="1.5882px" text-align="center" text-anchor="middle" line-height="84%" xml:space="preserve">         <tspan x="-626.59705" y="-291.74377" text-align="center" line-height="84%">lskjiahdjskdfd</tspan>         <tspan x="-626.59705" y="-290.40967" text-align="center" line-height="84%">sdjsfasssjwei</tspan>         <tspan x="-626.59705" y="-289.07553" text-align="center" line-height="84%">sdflsskjs      eisksf</tspan>      </text>
+  <text transform="rotate(207.49)" x="-636.0968" y="-291.5174" fill="#000000" font-size="4.3687px" line-height="125%" xml:space="preserve">         <tspan x="-636.0968" y="-291.5174" fill="#ffffff" font-family="'Enter Sansman'" font-weight="bold" letter-spacing="-.10922px">DOWTY</tspan>      </text>
+ </g>
+ <path d="m434.2 455.9c-118.4 20.22-340.62 14.38-341.72-72.37 0.45564-5.72 4.1231-5.2071 7.9034-4.9018 224.85 26.898 317.39 1.3853 318.72 4.0896 2.1606 4.3701 3.1627 14.111 6.4761 28.34l7.6373 0.15784c-3.644 17.202-2.7767 27.649 0.98399 44.684z" fill="#333"/>
+ <path d="m410.64 459.42-1.9325-23.756c-34.232 8.6933-79.6 16.768-149.99 12.134l1.2247 16.124c53.503 1.9013 106.09 3.3276 150.7-4.5022z"/>
+ <path d="m259.95 463.75-0.43329-4.1636c-129.72-8.63-155.41-45.39-158.21-67.67-1.3971-5.1217-2.8803-10.116-8.4693-9.0036 0.79844 11.797-1.406 69.048 167.11 80.833z" fill="#ccc"/>
+ <g font-family="Sans" letter-spacing="0px" word-spacing="0px">
+  <text transform="rotate(-92.2)" x="-429.59027" y="350.86905" fill="#ffffff" font-size="1.5882px" text-align="center" text-anchor="middle" line-height="84%" xml:space="preserve">         <tspan x="-429.59027" y="350.86905" text-align="center" line-height="84%">lskjiahdjskdfd</tspan>         <tspan x="-429.59027" y="352.20316" text-align="center" line-height="84%">sdjsfasssjwei</tspan>         <tspan x="-429.59027" y="353.53729" text-align="center" line-height="84%">sdflsskjs      eisksf</tspan>      </text>
+  <text transform="matrix(-.034784 -.99939 .99939 -.034784 0 0)" x="-436.76199" y="350.37711" fill="#000000" font-size="4.3687px" line-height="125%" xml:space="preserve">         <tspan x="-436.76199" y="350.37711" fill="#ffffff" font-family="'Enter Sansman'" font-weight="bold" letter-spacing="-.10922px">DOWTY</tspan>      </text>
+ </g>
+ <path d="m445.69 384.24c-78.33-91.06-187.82-284.53-114.03-330.17 5.1372-2.5565 6.5871 0.85101 8.2731 4.2483 92.79 206.57 162.33 272.74 160.7 275.28-2.6323 4.1032-10.465 9.9808-20.953 20.151l3.7995 6.627c-16.62 5.7392-25.128 11.865-37.79 23.865z" fill="#333"/>
+ <path d="m430.54 365.86 19.365-13.896c-25.09-24.85-55.38-59.58-87.67-122.29l-13.189 9.3571c25.935 46.835 51.804 92.637 81.499 126.84z"/>
+ <path d="m349.19 238.94 3.3452-2.5164c-59.44-115.62-41.18-156.58-23.52-170.46 3.6698-3.8362 7.1857-7.6802 3.3532-11.897-9.6992 6.7621-59.903 34.369 16.817 184.87z" fill="#ccc"/>
+ <g font-family="Sans" letter-spacing="0px" word-spacing="0px">
+  <text transform="rotate(-33.212)" x="205.07396" y="500.09439" fill="#ffffff" font-size="1.5882px" text-align="center" text-anchor="middle" line-height="84%" xml:space="preserve">         <tspan x="205.07396" y="500.09439" text-align="center" line-height="84%">lskjiahdjskdfd</tspan>         <tspan x="205.07396" y="501.4285" text-align="center" line-height="84%">sdjsfasssjwei</tspan>         <tspan x="205.07396" y="502.76263" text-align="center" line-height="84%">sdflsskjs      eisksf</tspan>      </text>
+  <text transform="rotate(-33.005)" x="198.43895" y="497.30106" fill="#000000" font-size="4.3687px" line-height="125%" xml:space="preserve">         <tspan x="198.43895" y="497.30106" fill="#ffffff" font-family="'Enter Sansman'" font-weight="bold" letter-spacing="-.10922px">DOWTY</tspan>      </text>
+ </g>
+ <path d="m519.36 358.22c41.61-112.68 157.63-302.3 233.34-259.93 4.7284 3.2511 2.4526 6.1724 0.30042 9.2952-135.58 181.38-159.69 274.29-162.7 274.1-4.8651-0.31024-13.805-4.3062-27.788-8.5405l-3.9504 6.5382c-13.084-11.747-22.569-16.212-39.206-21.46z" fill="#333"/>
+ <path d="m528.08 336.05 21.547 10.188c9.5618-34 25.22-77.339 64.384-136.01l-14.582-6.9905c-28.364 45.406-55.857 90.252-71.349 132.81z"/>
+ <path d="m599.58 203.33 3.8237 1.7036c72.25-108.07 116.92-111.98 137.63-103.28 5.1352 1.347 10.202 2.5556 12.03-2.842-10.62-5.198-59.13-35.695-153.48 104.42z" fill="#ccc"/>
+ <g font-family="Sans" letter-spacing="0px" word-spacing="0px">
+  <text transform="rotate(27.756)" x="669.08411" y="9.6359749" fill="#ffffff" font-size="1.5882px" text-align="center" text-anchor="middle" line-height="84%" xml:space="preserve">         <tspan x="669.08411" y="9.6359749" text-align="center" line-height="84%">lskjiahdjskdfd</tspan>         <tspan x="669.08411" y="10.970096" text-align="center" line-height="84%">sdjsfasssjwei</tspan>         <tspan x="669.08411" y="12.304217" text-align="center" line-height="84%">sdflsskjs      eisksf</tspan>      </text>
+  <text transform="rotate(27.963)" x="660.6684" y="5.1640177" fill="#000000" font-size="4.3687px" line-height="125%" xml:space="preserve">         <tspan x="660.6684" y="5.1640177" fill="#ffffff" font-family="'Enter Sansman'" font-weight="bold" letter-spacing="-.10922px">DOWTY</tspan>      </text>
+ </g>
+</g>
+</svg>
