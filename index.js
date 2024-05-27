@@ -525,20 +525,20 @@ function onReady() {
   cuSty='width:128px; height:128px;border:1px solid black; margin-right:10px;'
 
   tit("freesvg (with rotation)");
+   src("cgrd4", "freesvg", '-', cuSty);
+   src("circulo-cromatico", "freesvg", '-', cuSty);
+   src("circle-evolvent2", "freesvg", '-', cuSty);
    src("1310677699", "freesvg", '-', cuSty);
+   src("shiny-balls", "freesvg", '-', cuSty);
    src("1537138550", "freesvg", '-', cuSty);
    src("Prismatic-Abstract-Flower-Line-Art-II-4", "freesvg", '-', cuSty);
-   src("cgrd4", "freesvg", '-', cuSty);
-   src("circle-evolvent2", "freesvg", '-', cuSty);
-   src("circulo-cromatico", "freesvg", '-', cuSty);
    src("6-blade-prop", "freesvg", '-', cuSty);
-   src("shiny-balls", "freesvg", '-', cuSty);
 
   tit("wjschne.github.io (with rotation)");
+   src("hsv_stripes", "wjschne", '-', cuSty);
    src("blurry_circles", "wjschne", '-', cuSty);
    src("root3b", "wjschne", '-', cuSty);
    src("six_points_rainbow", "wjschne", '-', cuSty);
-   src("hsv_stripes", "wjschne", '-', cuSty);
 
   tit("SVG Background");
    src("bouncing-squares", "svg-bg");
