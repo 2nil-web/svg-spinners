@@ -529,7 +529,9 @@ function onReady() {
    src("circulo-cromatico", "freesvg", '-', cuSty);
    src("circle-evolvent2", "freesvg", '-', cuSty);
    src("1310677699", "freesvg", '-', cuSty);
-   src("shiny-balls", "freesvg", '-', cuSty);
+   src("shiny-ball1", "freesvg", '-', cuSty);
+   src("shiny-ball2", "freesvg", '-', cuSty);
+   src("shiny-ball3", "freesvg", '-', cuSty);
    src("1537138550", "freesvg", '-', cuSty);
    src("Prismatic-Abstract-Flower-Line-Art-II-4", "freesvg", '-', cuSty);
    src("6-blade-prop", "freesvg", '-', cuSty);

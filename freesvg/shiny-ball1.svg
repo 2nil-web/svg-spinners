@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="64mm" height="64mm" version="1.1" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+ <style>.spin{transform-origin:center;animation:rot 1.5s linear infinite}@keyframes rot{100%{transform:rotate(-360deg)}}</style>
+ <g class="spin">
+ <g transform="matrix(.98532 0 0 .98531 .044045 .044692)">
+  <defs>
+   <radialGradient id="radialGradient4059" cx="-195.01" cy="-214.47" r="300" gradientTransform="translate(0,-1.0723e-5)" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#187114" offset="0"/>
+    <stop stop-color="#017d00" offset=".42446"/>
+    <stop stop-color="#060" offset=".59289"/>
+    <stop stop-color="#002c00" offset="1"/>
+   </radialGradient>
+   <radialGradient id="radialGradient4061" cx="383.36" cy="434.1" r="165.37" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#00e100" offset="0"/>
+    <stop stop-color="#02c400" offset=".40217"/>
+    <stop stop-color="#009700" offset=".68007"/>
+    <stop stop-color="#005600" offset="1"/>
+   </radialGradient>
+   <radialGradient id="radialGradient4063" cx="-195.01" cy="-214.47" r="300" gradientTransform="translate(0,-1.0723e-5)" gradientUnits="userSpaceOnUse">
+    <stop stop-color="lime" offset="0"/>
+    <stop stop-color="#00c500" offset=".43315"/>
+    <stop stop-color="#006d00" offset=".91391"/>
+    <stop stop-color="lime" offset="1"/>
+   </radialGradient>
+  </defs>
+  <g transform="matrix(.098107 0 0 .098108 51.564 53.473)">
+   <path d="m-195.01-514.47c-165.69 0-300 134.31-300 300s134.31 300 300 300 300-134.31 300-300-134.31-300-300-300zm0 17.875c61.933 0 112.13 50.192 112.13 112.12 0 61.933-50.192 112.16-112.13 112.16-61.933 0-112.12-50.224-112.12-112.16 0-61.933 50.192-112.12 112.12-112.12zm147.72 255.75c61.933 0 112.12 50.192 112.12 112.12 0 61.933-50.192 112.16-112.12 112.16-61.933 0-112.13-50.224-112.13-112.16 0-61.933 50.192-112.12 112.13-112.12zm-295.44 0.21875c61.933 0 112.12 50.192 112.12 112.12 0 61.933-50.192 112.12-112.12 112.12-61.933 0-112.12-50.192-112.12-112.12 0-61.933 50.192-112.12 112.12-112.12z" fill="url(#radialGradient4059)"/>
+   <path transform="matrix(.67811 0 0 .67811 -454.96 -508.83)" d="m548.73 434.1c0 91.332-74.039 165.37-165.37 165.37-91.332 0-165.37-74.039-165.37-165.37 0-91.332 74.039-165.37 165.37-165.37 91.332 0 165.37 74.039 165.37 165.37z" fill="url(#radialGradient4061)" stroke="#9dff4a" stroke-width="1.4423"/>
+   <path d="m-195.01 85.531c-165.69 0-300-134.31-300-300s134.31-300 300-300 300 134.31 300 300-134.31 300-300 300zm0-17.875c61.933 0 112.13-50.192 112.13-112.12 0-61.933-50.192-112.16-112.13-112.16-61.933 0-112.12 50.224-112.12 112.16 0 61.933 50.192 112.12 112.12 112.12zm147.72-255.75c61.933 0 112.12-50.192 112.12-112.12 0-61.933-50.192-112.16-112.12-112.16-61.933 0-112.13 50.224-112.13 112.16 0 61.933 50.192 112.12 112.13 112.12zm-295.44-0.21875c61.933 0 112.12-50.192 112.12-112.12 0-61.933-50.192-112.12-112.12-112.12-61.933 0-112.12 50.192-112.12 112.12 0 61.933 50.192 112.12 112.12 112.12z" fill="url(#radialGradient4063)"/>
+  </g>
+ </g>
+ </g>
+</svg>
