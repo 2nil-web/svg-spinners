@@ -522,10 +522,10 @@ function onReady() {
     //document.body.innerHTML+=`<img src="svg-css/${id}.svg" class="${cla}" style="${cl}" title="svg-css/${id}.svg">`;
   }
 
-  cuSty0='width:64px; height:64px;'
-  cuSty=cuSty0+'border:1px solid black; margin-right:10px;'
+  cuSty0='width:64px; height:64px; margin-right:10px;'
+  cuSty=cuSty0+'border:1px solid black;'
 
-  tit("freesvg (with rotation)");
+  tit("freesvg (with css rotation)");
    src("cgrd4", "freesvg", 'spin', cuSty0);
    src("circulo-cromatico", "freesvg", 'spin', cuSty0);
    src("circle-evolvent2", "freesvg", 'spin', cuSty0);
@@ -540,7 +540,7 @@ function onReady() {
    src("Colorful-Paint-Swirls-Variation-2", "freesvg", 'spin', cuSty0);
    src("1544227037", "freesvg", 'spin', cuSty0);
 
-  tit("wjschne.github.io (with rotation)");
+  tit("wjschne.github.io (with css rotation)");
    src("hsv_stripes", "wjschne", 'spin', cuSty0);
    src("blurry_circles", "wjschne", 'spin', cuSty0);
    src("root3b", "wjschne", 'spin', cuSty0);
@@ -550,10 +550,12 @@ function onReady() {
    src("bouncing-squares", "svg-bg");
    src("fade-stagger-circles", "svg-bg");
    src("fade-stagger-squares", "svg-bg");
-   src("gear-spinner", "svg-bg");
    //src("gears-spinner", "svg-bg");
    src("infinite-spinner", "svg-bg");
    src("motion-blur-2", "svg-bg");
+
+  tit("SVG Background (with css rotation)");
+   src("gear", "svg-bg", 'filtered-color spin', cuSty0);
 
   tit("Sam Herbert");
    src("audio", "SamHerbert");
@@ -562,27 +564,30 @@ function onReady() {
    src("circles", "SamHerbert");
    src("grid", "SamHerbert");
    src("hearts", "SamHerbert");
-   src("oval", "SamHerbert");
+   //src("oval", "SamHerbert");
    src("puff", "SamHerbert");
    src("rings", "SamHerbert");
    src("spinning-circles", "SamHerbert");
-   src("tail-spin", "SamHerbert");
+   //src("tail-spin", "SamHerbert");
    src("three-dots", "SamHerbert");
 
-  cuSty2='width:64px; height:64px;'
+  tit("Sam Herbert (with css rotation)");
+   src("oval-nospin", "SamHerbert", 'filtered-color spin', cuSty0);
+   src("tail-nospin", "SamHerbert", 'filtered-color spin', cuSty0);
+
   tit("SVG CSS, Rings");
     src("ring-resize");
 
-  tit("SVG CSS, Rings (with rotation)");
-    src("90-ring", "svg-css", 'filtered-color spin', cuSty2); src("90-ring-with-bg", "svg-css", 'filtered-color spin', cuSty2); src("180-ring", "svg-css", 'filtered-color spin', cuSty2); src("180-ring-with-bg", "svg-css", 'filtered-color spin', cuSty2);
-    src("270-ring", "svg-css", 'filtered-color spin', cuSty2); src("270-ring-with-bg", "svg-css", 'filtered-color spin', cuSty2);
+  tit("SVG CSS, Rings (with css rotation)");
+    src("90-ring", "svg-css", 'filtered-color spin', cuSty0); src("90-ring-with-bg", "svg-css", 'filtered-color spin', cuSty0); src("180-ring", "svg-css", 'filtered-color spin', cuSty0); src("180-ring-with-bg", "svg-css", 'filtered-color spin', cuSty0);
+    src("270-ring", "svg-css", 'filtered-color spin', cuSty0); src("270-ring-with-bg", "svg-css", 'filtered-color spin', cuSty0);
 
   tit("SVG CSS, Dots");
     src("6-dots-rotate"); src("3-dots-bounce"); src("3-dots-fade"); src("3-dots-move"); src("3-dots-rotate"); src("3-dots-scale"); src("3-dots-scale-middle");
     src("6-dots-scale"); //src("6-dots-scale-middle");
     src("12-dots-scale-rotate");
-  tit("SVG CSS, Dots (with rotation)");
-    src("8-dots-rotate", "svg-css", 'filtered-color spin', cuSty2); src("dot-revolve", "svg-css", 'filtered-color spin', cuSty2);
+  tit("SVG CSS, Dots (with css rotation)");
+    src("8-dots-rotate", "svg-css", 'filtered-color spin', cuSty0); src("dot-revolve", "svg-css", 'filtered-color spin', cuSty0);
   tit("SVG CSS, Bars");
     src("bars-fade"); src("bars-scale"); src("bars-scale-fade"); src("bars-scale-middle"); src("bars-rotate-fade");
   tit("SVG CSS, Blocks");
@@ -590,7 +595,11 @@ function onReady() {
   tit("SVG CSS, Pulses");
     src("pulse"); src("pulse-2"); src("pulse-3"); src("pulse-multiple"); src("pulse-ring"); src("pulse-rings-2"); src("pulse-rings-3"); src("pulse-rings-multiple");
   tit("SVG CSS, Other");
-    src("bouncing-ball"); src("clock"); src("eclipse"); src("eclipse-half"); src("gooey-balls-1"); src("gooey-balls-2"); src("tadpole"); src("wifi"); src("wifi-fade"); src("wind-toy");
+    src("bouncing-ball"); src("clock"); src("gooey-balls-1"); src("gooey-balls-2"); src("wifi"); src("wifi-fade");
+  tit("SVG CSS, Other (with css rotation)");
+    src("eclipse", "svg-css", 'filtered-color spin', cuSty0);
+    //src("eclipse-half", "svg-css", 'filtered-color spin', cuSty0);
+    src("tadpole", "svg-css", 'filtered-color spin', cuSty0); src("wind-toy", "svg-css", 'filtered-color spin', cuSty0);
 
   //tit("Evil icons"); src("evil-Icons", "", "-", "width:'512px; height:512px;'");
 
