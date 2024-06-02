@@ -567,7 +567,7 @@ function onReady() {
     //src("eclipse-half", "svg-css", 'filtered-color spin', cuSty0);
     src("tadpole", "svg-css", 'filtered-color spin', cuSty0); src("wind-toy", "svg-css", 'filtered-color spin', cuSty0);
 
-  document.body.innerHTML+="<br /><h2><u>Without</u> css rotation</h2>";
+  document.body.innerHTML+="<br /><h2><u>Self animated</u></h2>";
   tit("SVG Background");
    src("bouncing-squares", "svg-bg");
    src("fade-stagger-circles", "svg-bg");
