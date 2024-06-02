@@ -513,7 +513,7 @@ function onReady() {
     if (fld == "") fld="svg-css";
  
     htm=`<a href="${fld}/${id}.svg"><img src="${fld}/${id}.svg" title="${fld}/${id}.svg"`;
-    if (cl == "") cl='filtered-color';
+    if (cl == "") cl='filtered-color boxed';
     if(cl != '-') htm+=` class="${cl}"`;
     if (st != "") htm+=` style="${st}"`;
     htm+='></a>'
@@ -522,25 +522,29 @@ function onReady() {
     //document.body.innerHTML+=`<img src="svg-css/${id}.svg" class="${cla}" style="${cl}" title="svg-css/${id}.svg">`;
   }
 
-  cuSty='width:128px; height:128px;border:1px solid black; margin-right:10px;'
+  cuSty0='width:64px; height:64px;'
+  cuSty=cuSty0+'border:1px solid black; margin-right:10px;'
 
   tit("freesvg (with rotation)");
-   src("cgrd4", "freesvg", '-', cuSty);
-   src("circulo-cromatico", "freesvg", '-', cuSty);
-   src("circle-evolvent2", "freesvg", '-', cuSty);
-   src("1310677699", "freesvg", '-', cuSty);
-   src("shiny-ball1", "freesvg", '-', cuSty);
-   src("shiny-ball2", "freesvg", '-', cuSty);
-   src("shiny-ball3", "freesvg", '-', cuSty);
-   src("1537138550", "freesvg", '-', cuSty);
-   src("Prismatic-Abstract-Flower-Line-Art-II-4", "freesvg", '-', cuSty);
-   src("6-blade-prop", "freesvg", '-', cuSty);
+   src("cgrd4", "freesvg", 'spin', cuSty0);
+   src("circulo-cromatico", "freesvg", 'spin', cuSty0);
+   src("circle-evolvent2", "freesvg", 'spin', cuSty0);
+   src("1310677699", "freesvg", 'spin', cuSty0);
+   src("shiny-ball1", "freesvg", 'spin', cuSty0);
+   src("shiny-ball2", "freesvg", 'spin', cuSty0);
+   src("shiny-ball3", "freesvg", 'spin', cuSty0);
+   src("1537138550", "freesvg", 'spin', cuSty0);
+   src("Prismatic-Abstract-Flower-Line-Art-II-4", "freesvg", 'spin', cuSty0);
+   src("6-blade-prop", "freesvg", 'spin', cuSty0);
+   src("ubuntu-36-swirl-remix", "freesvg", 'spin', cuSty0);
+   src("Colorful-Paint-Swirls-Variation-2", "freesvg", 'spin', cuSty0);
+   src("1544227037", "freesvg", 'spin', cuSty0);
 
   tit("wjschne.github.io (with rotation)");
-   src("hsv_stripes", "wjschne", '-', cuSty);
-   src("blurry_circles", "wjschne", '-', cuSty);
-   src("root3b", "wjschne", '-', cuSty);
-   src("six_points_rainbow", "wjschne", '-', cuSty);
+   src("hsv_stripes", "wjschne", 'spin', cuSty0);
+   src("blurry_circles", "wjschne", 'spin', cuSty0);
+   src("root3b", "wjschne", 'spin', cuSty0);
+   src("six_points_rainbow", "wjschne", 'spin', cuSty0);
 
   tit("SVG Background");
    src("bouncing-squares", "svg-bg");
@@ -565,13 +569,28 @@ function onReady() {
    src("tail-spin", "SamHerbert");
    src("three-dots", "SamHerbert");
 
-  tit("Rings"); src("90-ring"); src("90-ring-with-bg"); src("180-ring"); src("180-ring-with-bg"); src("270-ring"); src("270-ring-with-bg"); src("ring-resize");
-  tit("Dots"); src("3-dots-bounce"); src("3-dots-fade"); src("3-dots-move"); src("3-dots-rotate"); src("3-dots-scale"); src("3-dots-scale-middle");
-    src("6-dots-rotate"); src("6-dots-scale"); src("6-dots-scale-middle"); src("8-dots-rotate"); src("12-dots-scale-rotate"); src("dot-revolve");
-  tit("Bars"); src("bars-fade"); src("bars-scale"); src("bars-scale-fade"); src("bars-scale-middle"); src("bars-rotate-fade");
-  tit("Blocks"); src("blocks-scale"); src("blocks-shuffle-2"); src("blocks-shuffle-3"); src("blocks-wave");
-  tit("Pulses"); src("pulse"); src("pulse-2"); src("pulse-3"); src("pulse-multiple"); src("pulse-ring"); src("pulse-rings-2"); src("pulse-rings-3"); src("pulse-rings-multiple");
-  tit("Other"); src("bouncing-ball"); src("clock"); src("eclipse"); src("eclipse-half"); src("gooey-balls-1"); src("gooey-balls-2"); src("tadpole"); src("wifi"); src("wifi-fade"); src("wind-toy");
+  cuSty2='width:64px; height:64px;'
+  tit("SVG CSS, Rings");
+    src("ring-resize");
+
+  tit("SVG CSS, Rings (with rotation)");
+    src("90-ring", "svg-css", 'filtered-color spin', cuSty2); src("90-ring-with-bg", "svg-css", 'filtered-color spin', cuSty2); src("180-ring", "svg-css", 'filtered-color spin', cuSty2); src("180-ring-with-bg", "svg-css", 'filtered-color spin', cuSty2);
+    src("270-ring", "svg-css", 'filtered-color spin', cuSty2); src("270-ring-with-bg", "svg-css", 'filtered-color spin', cuSty2);
+
+  tit("SVG CSS, Dots");
+    src("6-dots-rotate"); src("3-dots-bounce"); src("3-dots-fade"); src("3-dots-move"); src("3-dots-rotate"); src("3-dots-scale"); src("3-dots-scale-middle");
+    src("6-dots-scale"); //src("6-dots-scale-middle");
+    src("12-dots-scale-rotate");
+  tit("SVG CSS, Dots (with rotation)");
+    src("8-dots-rotate", "svg-css", 'filtered-color spin', cuSty2); src("dot-revolve", "svg-css", 'filtered-color spin', cuSty2);
+  tit("SVG CSS, Bars");
+    src("bars-fade"); src("bars-scale"); src("bars-scale-fade"); src("bars-scale-middle"); src("bars-rotate-fade");
+  tit("SVG CSS, Blocks");
+    src("blocks-scale"); src("blocks-shuffle-2"); src("blocks-shuffle-3"); src("blocks-wave");
+  tit("SVG CSS, Pulses");
+    src("pulse"); src("pulse-2"); src("pulse-3"); src("pulse-multiple"); src("pulse-ring"); src("pulse-rings-2"); src("pulse-rings-3"); src("pulse-rings-multiple");
+  tit("SVG CSS, Other");
+    src("bouncing-ball"); src("clock"); src("eclipse"); src("eclipse-half"); src("gooey-balls-1"); src("gooey-balls-2"); src("tadpole"); src("wifi"); src("wifi-fade"); src("wind-toy");
 
   //tit("Evil icons"); src("evil-Icons", "", "-", "width:'512px; height:512px;'");
 

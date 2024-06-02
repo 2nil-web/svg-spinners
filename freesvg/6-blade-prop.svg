@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1012" height="864" version="1.1" viewBox="0 0 1012 864" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
- <style>.spin{transform-origin:center;animation:rot 1.5s linear infinite}@keyframes rot{100%{transform:rotate(-360deg)}}</style>
  <g class="spin">
  <defs>
   <filter id="filter3298" x="-.23904" y="-.23406" width="1.4779" height="1.4713">

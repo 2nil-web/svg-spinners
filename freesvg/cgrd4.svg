@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="600" height="600" version="1.1" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
- <style>.spin{transform-origin:center;animation:rot 1.5s linear infinite}@keyframes rot{100%{transform:rotate(-360deg)}}</style>
  <g class="spin">
  <defs>
   <linearGradient id="linearGradient9559" x1="-165410" x2="-83491" y1="-44885" y2="-44885" gradientTransform="matrix(.03125 0 0 .004 5169.1 243.54)" gradientUnits="userSpaceOnUse">

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1700" height="1700" enable-background="new 0 0 1698.096 1645.666" version="1.1" viewBox="0 0 1700 1700" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-<style>.spin{transform-origin:center;animation:rot 1.5s linear infinite}@keyframes rot{100%{transform:rotate(-360deg)}}</style>
 <g transform="matrix(.96312 0 0 .99853 32.264 28.384)">
 <g class="spin">
 <g fill="none" stroke="#000" stroke-miterlimit="1" stroke-width="2.3606">

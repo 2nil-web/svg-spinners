@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 <svg version="1.1" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
- <style>.spin{transform-origin:center;animation:rot 1.5s linear infinite}@keyframes rot{100%{transform:rotate(-360deg)}}</style>
  <g class="spin">
  <defs>
   <radialGradient id="radialGradient4738-8" cx="1771.7" cy="2824" r="1771.7" gradientUnits="userSpaceOnUse">
