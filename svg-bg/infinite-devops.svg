@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+<style>
+@keyframes flicker {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+  50%  { opacity:0; }
+  0%   { opacity:1; }
+}
+
+.anim-dev, .anim-ops {
+  animation-name: flicker;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+}
+
+.anim-dev {
+  animation-delay: 1s;
+}
+.anim-ops {
+  animation-delay: 0s;
+}
+</style>
+<g fill="none" stroke="#6d15ff" stroke-dasharray="300, 385" stroke-linecap="round" stroke-width="20">
+  <animate attributeName="stroke-dashoffset" calcMode="spline" dur="4" keySplines="0 0 1 1" repeatCount="2" values="685;-685"/>
+ <path d="m26 73c0 31 27 50 50 50 58 0 92-100 150-100 28 0 50 22 50 50s-23 50-50 50c-58 0-92-100-150-100-24 0-50 19-50 50z" stroke="#6d15ff"/>
+ <path d="m275 71c0 31-27 50-50 50-58 0-92-100-150-100-28 0-50 22-50 50s23 50 50 50c58 0 92-100 150-100 24 0 50 19 50 50z" stroke="#ff156d"/>
+</g>
+ <g fill="#fff" font-family="Calibri" font-size="16.985px" font-style="italic" font-weight="bold" stroke-width=".13163" text-anchor="middle">
+  <text transform="rotate(-18.158)" x="48.703388" y="47.951508">Code</text>
+  <text transform="rotate(36.319)" x="121.94833" y="-32.271482">Plan</text>
+  <text transform="rotate(26.122)" x="101.76248" y="85.101494">Build</text>
+  <text transform="rotate(-44.268)" x="18.074627" y="162.67641">Test</text>
+  <text transform="rotate(-43.954)" x="96.908646" y="161.36771">Release</text>
+  <text transform="rotate(-57.715)" x="59.49477" y="280.1333">Operate</text>
+  <text transform="rotate(37.144)" x="212.63423" y="-23.723982">Monitor</text>
+  <text transform="matrix(.99942 .034192 -.034195 .99941 0 0)" x="229.68634" y="20.393759" font-size="16.985px" stroke-width=".13163">Deploy</text>
+ </g>
+ <g fill="#ff156d" font-family="Calibri" font-size="42.422px" font-style="italic" font-weight="bold" stroke-width=".32876" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">
+  <text class="anim-dev" x="83.114052" y="82.349884">Dev</text>
+  <text class="anim-ops" x="215.91649" y="85.07946" fill="#6d15ff">Ops</text>
+ </g>
+</svg>

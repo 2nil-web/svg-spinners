@@ -574,6 +574,7 @@ function onReady() {
    src("fade-stagger-squares", "svg-bg");
    //src("gears-spinner", "svg-bg");
    src("infinite-spinner", "svg-bg");
+   src("infinite-devops", "svg-bg");
    src("motion-blur-2", "svg-bg");
 
   tit("Sam Herbert");
