@@ -572,7 +572,6 @@ function onReady() {
    src("bouncing-squares", "svg-bg");
    src("fade-stagger-circles", "svg-bg");
    src("fade-stagger-squares", "svg-bg");
-   //src("gears-spinner", "svg-bg");
    src("infinite-spinner", "svg-bg");
    src("infinite-devops", "svg-bg");
    src("motion-blur-2", "svg-bg");
@@ -593,6 +592,10 @@ function onReady() {
 
   tit("SVG CSS, Rings");
     src("ring-resize");
+
+  tit("SVG CSS,Gears");
+    src("spin-2-gears");
+    src("spin-3-gears");
 
   tit("SVG CSS, Dots");
     src("6-dots-rotate"); src("3-dots-bounce"); src("3-dots-fade"); src("3-dots-move"); src("3-dots-rotate"); src("3-dots-scale"); src("3-dots-scale-middle");
