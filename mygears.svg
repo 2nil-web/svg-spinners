@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="512" height="512" version="1.1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+ <style>
+ #teeth1, #teeth2 {
+    stroke:#000;
+    stroke-linecap:square;
+    stroke-width:18;
+  }
+  #teeth1 {
+    animation: rotate 2.5s infinite linear;
+    transform-origin: 128px 128px;
+  }
+  #teeth2 {
+    animation: anti-rotate 2.5s infinite linear;
+    transform-origin: 128px 128px;
+  }
+  @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(359deg); } }
+  @keyframes anti-rotate { from { transform: rotate(359deg); } to { transform: rotate(0deg); } }
+  </style>
+  <g id="teeth1">
+    <circle cx="128" cy="128" r="64" fill="none" stroke="#000" stroke-width="18"/>
+    <path d="m31 128h24"/>
+    <path d="m36 75 37 21z"/>
+    <path d="m96 72-21-37z"/>
+    <path d="m128 32v24"/>
+    <path d="m160 72 19-35z"/>
+    <path d="m219 75-36 20z"/>
+    <path d="m225 128h-24"/>
+    <path d="m183 160 35 19z"/>
+    <path d="m180 219-20-36z"/>
+    <path d="m128 225v-24"/>
+    <path d="m75 219 20-36z"/>
+    <path d="m72 160-35 19z"/>
+  </g>
+  <g transform="rotate(12.498 -380.22 786.64)">
+    <g id="teeth2">
+      <circle cx="128" cy="128" r="64" fill="none" stroke="#000" stroke-width="18"/>
+      <path d="m25 128h36"/>
+      <path d="m36 74 37 21z"/>
+      <path d="m96 72-21-37z"/>
+      <path d="m128 24v40"/>
+      <path d="m160 72 19-35z"/>
+      <path d="m219 75-36 20z"/>
+      <path d="m232 128h-39"/>
+      <path d="m183 160 35 19z"/>
+      <path d="m180 219-20-36z"/>
+      <path d="m128 234v-36"/>
+      <path d="m75 219 20-36z"/>
+      <path d="m72 160-35 19z"/>
+    </g>
+  </g>
+</svg>
